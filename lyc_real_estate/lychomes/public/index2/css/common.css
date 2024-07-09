@@ -1,0 +1,21 @@
+/* ----------------------------------------------------------------
+ common.css - ã‚µã‚¤ãƒˆå…¨ä½“ã§å…±é€šã®CSSï¼ˆXHTML 1.0 Transitional,HTML5 å…±æœ‰ï¼‰
+----------------------------------------------------------------- */
+
+
+/* box-blank-mansion - ç‰©ä»¶ãŒç„¡ã„å ´åˆã®è¡¨ç¤º
+ï¼ˆbrillia_sales_bukken_box_blank_mansion.tplï¼‰
+---------------------------------------------------*/
+
+.box-blank-mansion {
+	background: #fdfdfd;
+	border: 1px solid #ddd;
+	margin: 0 1em 1em;
+	padding: 6em 0;
+}
+
+.box-blank-mansion .no-mansion {
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+}

@@ -1,0 +1,146 @@
+/*release*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-l.png);
+}
+
+/* content1
+---------------------------------------------------*/
+.content1 .content_title{
+	margin-bottom: 8em;
+}
+
+.news_wrap {
+	width: 800px;
+	margin: 0 auto 4em;
+	color: #0D1B37;
+	display: table;
+}
+
+.news_wrap h2 {
+	width: 250px;
+	display: table-cell;
+	margin-right: 10px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.news_wrap h2 .title-en {
+	font-size: 46px;
+}
+
+.news_wrap h2 .title-ja {
+	font-size: 12px;
+	font-weight: bold;
+	color: #121212;
+	display: block;
+	margin: 0;
+}
+
+.news {
+	display: table-cell;
+	vertical-align: top;
+}
+.news dl {
+	margin: 0 0 14px;
+	padding: 0 0 14px 45px;
+	position: relative;
+	min-height: 26px;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 2.0em;
+	border-bottom: 1px dotted #0D1B37;
+}
+
+.news dl.end {
+	margin: 0;
+	border-bottom: none;
+}
+
+.news dl dt {
+	width: 30px;
+	height: 25px;
+	color: #0D1B37;
+	font-size: 13px;
+	/* background: #0D1B37; */
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	line-height: 25px;
+	margin-top: -19px;
+}
+
+.news dl dt:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f1c1";
+	font-weight: bold;
+	font-size: 18px;
+	padding-left: .8em;
+	padding-right: .5em;
+}
+
+
+.news dl dd {
+	color: #121212;
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 97px;
+
+}
+
+.news dl dd a {
+	font-size: 14px;
+	text-decoration: none;
+}
+.news dl dd a:hover {
+	text-decoration :underline;
+}
+
+.news dl dd span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	color: #0D1B37;
+	margin-top: -13px;
+}
+
+
+.list-back_number{margin-bottom: 5em;}
+
+.list-back_number li{
+	width: 110px;
+	float: left;
+	margin: 0 0 2em 23px;
+}
+
+.list-back_number li a{
+	border: 1px solid;
+	text-align: center;
+	padding: 20px;
+}
+
+.list-back_number li a:hover{
+	background: #262626;
+}
+
+.list-back_number .txt1{
+	display: block;
+	font-size: 30px;
+}
+.list-back_number .txt2{
+	display: block;
+}
+
+.list-back_number li a:hover span{
+	color: #fff;
+}

@@ -1,0 +1,4183 @@
+@charset "utf-8";
+
+/*----------------------------------------------------
+全ページ共通CSS
+----------------------------------------------------*/
+
+/* 共通
+---------------------------------------------------*/
+
+input[type=checkbox] {
+	border: none;
+}
+
+body p {
+	font-size: 13px;
+	/* font-weight: 500; */
+	line-height: 1.8;
+	letter-spacing: .05em;
+}
+
+a {
+	display: block;
+}
+
+
+.block {
+	margin: 0 auto 120px;
+	width: 100%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.theme_font {
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+.theme_font_ja {
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: 400;
+}
+
+.shadow {
+	text-shadow: #000 1px 1px 10px, #000 -1px 1px 10px, #000 1px -1px 10px, #000 -1px -1px 10px;
+}
+
+.shadowthin {
+	text-shadow: #154860 0 0 10px;
+}
+
+.shadowdark {
+	text-shadow: #000 3px 3px 4px, #000 -3px 3px 4px, #000 3px -3px 4px, #000 -3px -3px 4px;
+}
+
+.link_button {
+	margin: 0;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	height: 60px;
+	box-sizing: border-box;
+	display: block;
+	text-decoration: none;
+	position: relative;
+}
+
+.link_button.hanten {
+	border-color: #999;
+}
+
+.link_button:after {
+	content: '';
+	height: 60px;
+	width: 62px;
+	box-sizing: border-box;
+	position: absolute;
+	top: -1px;
+	right: 0;
+	transition: 0.2s ease width;
+	border-top: 1px solid #0D1B37;
+	border-bottom: 1px solid #0D1B37;
+}
+
+.link_button.hanten:after {
+	border-color: #ccc;
+}
+
+.link_button>.button_label {
+	font-size: 14px;
+	font-weight: 600;
+	display: block;
+	line-height: 59px !important;
+	margin-left: 1em;
+	position: relative;
+	text-align: left;
+	transition: 0.5s color ease;
+}
+
+.link_button>.button_label.two {
+	line-height: 23px !important;
+	margin-top: 6px;
+}
+
+.link_button>.button_label:after {
+	transition: 0.4s right ease;
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 32%;
+	transform: translateY(-50%);
+	right: 25px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid;
+	border-color: transparent transparent #0D1B37 #0D1B37;
+	transform: rotate(225deg);
+}
+
+.link_button.hanten>.button_label:after {
+	border-color: transparent transparent #ccc #ccc;
+	transform: rotate(225deg);
+}
+
+.link_button:hover:after {
+	content: '';
+	height: 60px;
+	width: 100%;
+	box-sizing: border-box;
+	position: absolute;
+	top: -1px;
+	right: 0;
+	border-top: 1px solid #0D1B37;
+	border-bottom: 1px solid #0D1B37;
+}
+
+.link_button.hanten:hover:after {
+	border-color: #ccc;
+}
+
+.link_button.hanten .button_label {
+	color: #ddd;
+	font-weight: 500;
+}
+
+.link_button:hover .button_label {
+	color: #0D1B37;
+}
+
+.link_button.hanten:hover .button_label {
+	color: #fff;
+}
+
+.link_button_center {
+	text-align: center;
+}
+
+.link_button_center .link_button {
+	width: 340px;
+	display: inline-block;
+}
+
+.vertical_center {
+	min-height: 6.5em;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+a.inline_txt_link {
+	display: inline-block;
+	text-decoration: underline;
+	color: inherit;
+	font-size: inherit;
+}
+
+a.inline_txt_link:hover {
+	text-decoration: underline;
+	color: inherit;
+	font-size: inherit;
+}
+
+/* img-txt
+---------------------------------------------------*/
+.img-txt {
+	clear: both;
+}
+
+.img-txt .img-area {
+	float: left;
+	width: 400px;
+	margin-left: 0;
+	margin-right: 60px;
+}
+
+.img-txt .img-area.img-right {
+	float: right;
+	margin-left: 60px;
+	margin-right: 0;
+}
+
+.img-txt .txt-area {
+	overflow: hidden;
+	zoom: 1;
+}
+
+/*
+txt-legible
+---------------------------------------------------*/
+.txt-legible {}
+
+.txt-legible p {
+	line-height: 2.2em;
+	margin-bottom: 1.8em;
+	text-indent: 1em;
+}
+
+.txt-legible p b {
+	font-weight: bold;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #999;
+}
+
+/* 外国語ページはインデント無 */
+.other_languages_page .txt-legible p {
+	text-indent: 0;
+}
+
+/* アニメーション
+---------------------------------------------------*/
+.anime {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	transition: .3s;
+	z-index: 9;
+}
+
+.anime::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: '';
+	background: rgba(0, 0, 0, .03);
+	transition: transform .3s;
+}
+
+.anime-1::before {
+	transform: scale(0, 1);
+}
+
+.anime-1:hover {
+	animation: hover_anime-1 .6s forwards;
+}
+
+.anime-1:hover::before {
+	animation: hover_anime-1-in .3s forwards alternate, hover_anime-1-out .3s .3s forwards alternate;
+}
+
+.anime-wrap .anime-in::before {
+	transform: scale(0, 1);
+}
+
+.anime-wrap:hover .anime-in {
+	animation: hover_anime-1 .6s forwards;
+}
+
+.anime-wrap:hover .anime-in::before {
+	animation: hover_anime-1-in .3s forwards alternate, hover_anime-1-out .3s .3s forwards alternate;
+}
+
+@keyframes hover_anime-1-in {
+	0% {
+		transform-origin: left top;
+		transform: scale(0, 1);
+	}
+
+	100% {
+		transform-origin: left top;
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes hover_anime-1-out {
+	0% {
+		transform-origin: right top;
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform-origin: right top;
+		transform: scale(0, 1);
+	}
+}
+
+/* ぱんくず
+---------------------------------------------------*/
+
+#pankuzu {
+	padding: 5px 0 10px;
+}
+
+#pankuzu .body a {
+	color: #061429;
+	display: inline-block;
+	text-decoration: underline;
+}
+
+#pankuzu .body a:hover {
+	text-decoration: none;
+}
+
+
+/* タイトル系
+---------------------------------------------------*/
+
+/*
+page_header
+*/
+
+.page_header {
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	min-width: 1200px;
+	height: 160px;
+}
+
+.page_header_parts {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* 背景 */
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.page_header_bg_img img {
+	width: 100%;
+	opacity: 0.3;
+}
+
+.page_header_bg_img:before {
+	width: 100%;
+	height: 100%;
+	background: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .5;
+	content: "";
+	z-index: 1;
+}
+
+/* キャッチコピー部分*/
+.page_header_catch {
+	z-index: 2;
+	background: url(../img/common/page_header_catch-s.png) no-repeat top left;
+}
+
+.page_header_catch .inner {
+	padding-top: 50px;
+	padding-left: 3%;
+	z-index: 3;
+}
+
+/*
+page_title
+*/
+
+.page_title {}
+
+.page_title .title-en {
+	color: #fff;
+	font-size: 48px;
+	position: relative;
+}
+
+.page_title .title-en:after {
+	content: "";
+	width: 68px;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	top: 28px;
+	right: -68px;
+	-moz-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.page_title .title-ja {
+	color: #fff;
+	margin-left: 50px;
+	font-size: 21px;
+	font-weight: 500;
+	display: inline-block;
+}
+
+.page_title .english_title {
+	color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	/* line-height: 1.6; */
+	letter-spacing: 1px;
+}
+
+.page_title .original-chinese_title {
+	color: #fff;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+.page_title .simplified-chinese_title {
+	color: #fff;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+
+/*
+コンテンツタイトル
+*/
+.content_title {
+	text-align: center;
+	margin: 0 0 4em;
+	position: relative;
+}
+
+
+.content_title .title-ja {
+	color: #222;
+	display: block;
+	font-size: 36px;
+	font-weight: 500;
+	letter-spacing: .05em;
+	padding-bottom: .2em;
+	/* padding-top: .3em; */
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+}
+
+
+.content_title .title-en {
+	color: #bbb;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 22px;
+	letter-spacing: 2px;
+	display: inline-block;
+}
+
+.content_title:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -25px;
+	display: inline-block;
+	width: 50px;
+	height: 1px;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translate(-50%);
+	background-color: #0D1B37;
+}
+
+.content_title .english_title {
+	color: #222;
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: .05em;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+}
+
+.content_title .original-chinese_title {
+	color: #222;
+	display: block;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 34px;
+	font-weight: 400;
+	letter-spacing: .05em;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+}
+
+.content_title .simplified-chinese_title {
+	color: #222;
+	display: block;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-size: 34px;
+	font-weight: 400;
+	letter-spacing: .05em;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+}
+
+
+
+
+/*
+ブロックタイトル
+*/
+.block_title {
+	position: relative;
+	text-align: center;
+	font-size: 20px;
+	margin: 2em 40px;
+}
+
+.block_title::before {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	background: linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
+}
+
+.block_title span {
+	color: #666;
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	padding: 0 36px;
+	background-color: #fff;
+	text-align: left;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.english_page .block_title span {
+	font-family: 'Oswald', sans-serif;
+}
+
+.original-chinese_page .block_title span {
+	/*font-family: 'Oswald', sans-serif;*/
+}
+
+
+.bg--gray .block_title span {
+	background-color: #f0f0f0;
+}
+
+.block_title.black {
+	text-align: left;
+	margin-left: 0;
+}
+
+.block_title.black span {
+	background: #262626;
+	padding: .5em 1em;
+	color: #fff;
+}
+
+/*
+サブタイトル
+*/
+.block_sub_title {
+	background: #f6f6f6;
+	border-top: 1px dotted #ddd;
+	font-size: 15px;
+	line-height: 220%;
+	letter-spacing: 2px;
+	margin: 1.8em 0 1em;
+	padding-left: 10px;
+}
+
+
+/* 導入文
+---------------------------------------------------*/
+.introduction_statement {
+	margin-bottom: 5em;
+}
+
+.introduction_statement p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 2.2em;
+}
+
+/* リストコンテンツ .list-mini_content
+---------------------------------------------------*/
+ul.list-mini_content {
+	list-style: none;
+	margin: 4em 0 0 -36px;
+	padding: 0;
+	text-align: center;
+}
+
+ul.list-mini_content li {
+	display: inline-block;
+	margin: 0 0 0 36px;
+	position: relative;
+	vertical-align: top;
+	width: 370px;
+}
+
+ul.list-mini_content .txt-wrap {
+	padding: 1.5em 1em 0;
+}
+
+ul.list-mini_content .txt {
+	text-align: left;
+}
+
+ul.list-mini_content h4.title {
+	font-size: 20px;
+	font-weight: 500;
+	border-bottom: 1px solid #E3E3E3;
+	padding-bottom: 1em;
+	margin-bottom: 1.5em;
+	letter-spacing: .15em;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+}
+
+ul.list-mini_content h4.two {
+	line-height: 20px;
+
+}
+
+ul.list-mini_content .link_button {
+	margin: 1.2em auto;
+	font-size: 12px;
+}
+
+
+
+/* リストコンテンツ（リンク） .list-mini_content_link
+デフォルト：2列 テキスト背景#f5f5f5
+---------------------------------------------------*/
+ul.list-mini_content_link {
+	list-style: none;
+	margin: 0 0 0 -80px;
+	padding: 0;
+	text-align: center;
+}
+
+ul.list-mini_content_link li {
+	display: inline-block;
+	margin: 0 0 0 80px;
+	position: relative;
+	vertical-align: top;
+	width: 540px;
+}
+
+ul.list-mini_content_link .img-area {
+	/* border: 1px solid #ddd; */
+	margin: 0 auto;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: -1;
+	background: #000;
+}
+
+ul.list-mini_content_link .img-area img {
+	width: 100%;
+	transition-duration: 0.5s;
+	opacity: 1;
+	/* transition: all 0.45s ease-in-out; */
+}
+
+ul.list-mini_content_link .anime-wrap:hover .img-area img {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	opacity: .45;
+}
+
+ul.list-mini_content_link .anime-wrap:hover .img-area .img-cap-wrap:after {
+	color: #fff;
+	content: "VIEW MORE";
+	font-size: 24px;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	height: 100%;
+	left: 0;
+	letter-spacing: 2px;
+	line-height: 1;
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+	top: 47%;
+	vertical-align: middle;
+	width: 100%;
+	z-index: 2;
+}
+
+ul.list-mini_content_link .txt-wrap {
+	padding: 1.5em 1em;
+	margin: -30px 20px 0;
+	background: #f5f5f5;
+	z-index: 2;
+	position: relative;
+}
+
+ul.list-mini_content_link .txt-wrap:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 20px 20px;
+	border-color: transparent transparent #0D1B37 transparent;
+}
+
+ul.list-mini_content_link .txt {
+	text-align: left;
+}
+
+ul.list-mini_content_link .txt a {
+	display: inline-block;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+ul.list-mini_content_link h4.title {
+	font-size: 20px;
+	font-weight: 500;
+	border-bottom: 1px solid #E3E3E3;
+	padding-bottom: 1em;
+	margin-bottom: 15px;
+	letter-spacing: .15em;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+}
+
+ul.list-mini_content_link h4.two {
+	line-height: 20px;
+
+}
+
+ul.list-mini_content_link .link_button {
+	margin: 1.2em auto;
+	font-size: 12px;
+}
+
+/* 3列 */
+ul.list-mini_content_link.row-3 {
+	margin-left: -36px;
+}
+
+ul.list-mini_content_link.row-3 li {
+	margin-left: 36px;
+	width: 370px;
+}
+
+/* txt-wrapの背景色をコンテンツの背景色とあわせる*/
+.bg--gray ul.list-mini_content_link .txt-wrap {
+	background: #fff;
+}
+
+/* キャプション関連
+---------------------------------------------------*/
+/* img-one */
+.img-one {
+	margin: 2em 0;
+}
+
+/* img-one-fit */
+.img-one-fit {
+	padding: 0;
+	text-align: center;
+	line-height: 0;
+	margin-bottom: 2em;
+	max-width: 1000px;
+}
+
+/* img-org-fit */
+.img-org-fit {
+	border: 1px solid #C1C6C9;
+	background: #fff;
+	padding: 10px 0;
+	text-align: center;
+	line-height: 0;
+	width: 100%;
+}
+
+/* img-cap-wrap */
+.img-cap-wrap {
+	max-width: 100%;
+	position: relative;
+	line-height: 0;
+	margin: 0 auto;
+	background: #262626;
+}
+
+.img-cap-wrap .img-cap {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 9px;
+	line-height: 1;
+	text-align: right;
+	padding: 3px 8px 3px 12px;
+	background: rgba(7, 9, 42, 0.4);
+	z-index: 999;
+}
+
+.img-cap-wrap .img-cap-out {
+	position: absolute;
+	font-size: 10px;
+	bottom: -12px;
+	right: -2px;
+	color: #999;
+}
+
+.img-one-fit .img-cap-wrap .img-cap-out {
+	position: absolute;
+	right: 0;
+	bottom: -11px;
+}
+
+.img-org-fit .img-cap-wrap .img-cap-out {
+	position: absolute;
+	right: 0;
+	bottom: -25px;
+}
+
+
+
+
+/* もっと見る
+---------------------------------------------------*/
+
+.more {
+	text-align: center;
+}
+
+.more a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.more a:hover {
+	opacity: 1;
+}
+
+.more .btn-more {
+	background: url(../img/common/icon_btn_more.png) right top no-repeat;
+	border-bottom: 1px solid transparent;
+	color: #1b1b1b;
+	display: inline-block;
+	font-size: 13px;
+	height: 30px;
+	line-height: 27px;
+	padding: 1px 35px 0 0;
+	transition: .3s;
+}
+
+.more a:hover .btn-more {
+	border-bottom: 1px dashed #1b1b1b;
+	padding: 1px 50px 0 0;
+}
+
+
+
+/* 注釈リスト
+---------------------------------------------------*/
+ul.list-notes li {
+	font-size: 95%;
+	font-weight: 500;
+	color: #888;
+	display: block;
+	line-height: 1.5;
+	position: relative;
+	padding-left: 1.5em;
+}
+
+ul.list-notes>li:before {
+	content: "\203b";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+/* 番号付き */
+ol.list-notes li {
+	font-size: 95%;
+	font-weight: 500;
+	color: #888;
+	display: block;
+	line-height: 1.5;
+	position: relative;
+	padding-left: 2em;
+}
+
+ol.list-notes>li:before {
+	content: "\203b" counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* letter-spacing: -0.025em; */
+	background: none;
+	color: inherit;
+}
+
+
+/* その他ページを構成する順序リスト
+---------------------------------------------------*/
+ol.list-order {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ol.list-order>li {
+	margin-bottom: 2.5em;
+	font-size: 14px;
+}
+
+ol.list-order h4 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #0D1B37;
+	margin-top: -3px;
+	margin-bottom: .7em;
+}
+
+ol.list-order p {
+	font-size: 14px
+}
+
+ol.list-order .waku {
+	border: 1px solid #262626;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* ボタン調整 */
+ol.list-order .link_button {
+	margin-top: 2em;
+	width: auto;
+}
+
+ol.list-order .link_button .button_label {
+	padding-right: 60px;
+}
+
+/* 注釈調整 */
+ol.list-order .list-notes {
+	margin-top: .5em;
+}
+
+/* タイトル */
+ol.list-order .em_title {
+	font-size: 15px;
+	background: #0D1B37;
+	color: #fff;
+	padding: .4em .5em;
+	margin: 1.5em 0;
+}
+
+/* 入れ子手書き用 */
+ol.list-order .indent-1 {
+	margin: 1em;
+	margin-left: 2em;
+	text-indent: -1.3em;
+	font-weight: bold;
+}
+
+ol.list-order .indent-2 span {
+	display: block;
+	margin-left: 4em;
+	margin-top: .8em;
+	line-height: 1.6;
+	text-indent: -1.3em;
+}
+
+
+/* インフォメーション先
+---------------------------------------------------*/
+.item-information .name {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: .8em;
+}
+
+.item-information .name:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f101";
+	font-weight: bold;
+	padding-left: .5em;
+	padding-right: .8em;
+}
+
+.item-information .url a {
+	display: inline-block;
+}
+
+.item-information .url a:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f2d2";
+	font-weight: normal;
+	padding-left: .5em;
+	padding-right: .8em;
+}
+
+.item-information p .em {
+	display: inline-block;
+	width: 124px;
+	background: #262626;
+	text-align: center;
+	font-size: 11px;
+	color: #fff;
+	margin-right: 1em;
+	line-height: 20px;
+	height: 20px;
+}
+
+
+/* ストリートビュー
+---------------------------------------------------*/
+
+.street_view img {
+	border: none !important;
+	max-width: none !important;
+}
+
+.maplink {
+	font-weight: bold;
+}
+
+.warningBlock {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+
+/* 404ページ
+---------------------------------------------------*/
+
+.page404 {
+	line-height: 1;
+	margin: 30px 0 0;
+	text-align: center;
+}
+
+.page404 .page404-title {
+	font-size: 500%;
+	line-height: 1.7;
+	color: #ddd;
+}
+
+.page404 .page404-txt {}
+
+
+
+/*------------------------------------------------------------------------------
+.以下未チェック
+------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*----------------------------------------------------
+.search 検索
+----------------------------------------------------*/
+
+/* タブ - default.css の上書き */
+
+.search:not(.brand) ul.tabs_top li {
+	display: none;
+}
+
+/* 選択中の都道府県エリアのみのタブを表示
+   ※エリアが増えたらここに追加        */
+.search ul.tabs_top.kanto li.kanto,
+.search ul.tabs_top.tokai li.tokai,
+.search ul.tabs_top.kansai li.kansai {
+	display: block;
+}
+
+ul.tabs_top li.kansai {
+	width: 19%;
+}
+
+/* ------------------------- END */
+
+
+.search_button_wrap {
+	margin: 20px auto 0;
+	text-align: center;
+}
+
+.search .searchAreaBottom,
+.search .searchRailroadBottom {
+	margin: 60px 0;
+}
+
+/* ○○から探すのリンク一覧*/
+.search .tab_body .prefecture_list_table {
+	width: 100%;
+}
+
+.search .tab_body .prefecture_list_table .linklist th {
+	background: #dee7f5;
+	border-bottom: 1px solid #c9cfd8;
+	color: #5b5e63;
+	padding: 20px 10px;
+	width: 20%;
+}
+
+.search .tab_body .prefecture_list_table .linklist h3 {
+	background: none;
+	border: none;
+	line-height: 1;
+}
+
+.search .tab_body .prefecture_list_table .linklist h3 span {
+	font-weight: bold;
+}
+
+.search .tab_body .prefecture_list_table .linklist h3 span.hd_cnt {
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: 0;
+	margin: 0 0 0 6px;
+	vertical-align: top;
+}
+
+.search .tab_body .prefecture_list_table .linklist td {
+	border: 1px solid #efefef;
+	border-bottom: 1px solid #e5e9ef;
+	padding: 20px 5px 8px;
+	width: 80%;
+}
+
+.search .tab_body .linklist ul {
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.search .tab_body .linklist li {
+	float: left;
+	font-size: 15px;
+	vertical-align: top;
+	width: 23.6%;
+	margin: 0 0 12px 10px;
+}
+
+.search .tab_body .railroad .linklist li {
+	width: 32%;
+}
+
+.search .tab_body .railroad .checkbox_right_txt {
+	max-width: 85%;
+}
+
+.search .tab_body .linklist li span {
+	font-size: 11px;
+	margin-left: 5px;
+}
+
+.search .tab_body .linklist a:hover {
+	text-decoration: underline;
+}
+
+.search .tab_body .linklist .more-button {
+	background: #f0f0f0;
+	border-bottom: 1px solid #c9cfd8;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 30px;
+	margin: 0 0 1px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.search .tab_body .linklist .more-button.open {
+	display: none;
+}
+
+.search .tab_body .linklist .more-button span {
+	color: #204462;
+	letter-spacing: 2px;
+	line-height: 32px;
+	padding-left: 3px;
+}
+
+.search .tab_body .linklist .kakusu-list {
+	display: block;
+}
+
+.search .tab_body .linklist .close-button {
+	clear: both;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 91%;
+	text-align: center;
+	text-decoration: underline;
+	width: 8%;
+}
+
+.search .tab_body .linklist .close-button span {
+	color: #004166;
+	display: block;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+/* ページ下部の.linelist - Defaultですべて開いた状態にして開閉動作も不要 */
+.searchAreaBottom .tab_body .linklist .more-button,
+.searchAreaBottom .tab_body .linklist .close-button {
+	display: none;
+}
+
+.searchAreaBottom .tab_body .linklist .kakusu-list {
+	display: block;
+}
+
+
+/* 路線リンク一覧 */
+.search .linelist .block-title {
+	margin-bottom: 30px;
+}
+
+.search .linelist .stationName {
+	border: 1px solid #ddd;
+	padding: 20px 20px 8px;
+}
+
+.search .linelist ul {
+	overflow: hidden;
+}
+
+.search .linelist li {
+	float: left;
+	font-size: 15px;
+	vertical-align: top;
+	width: 24%;
+	margin: 0 0 12px 10px;
+}
+
+.search .linelist li .num {
+	font-size: 11px;
+	margin-left: 5px;
+}
+
+.search .linelist li span {
+	color: #666;
+}
+
+.search .linelist li a {
+	color: #294b80;
+}
+
+.search .linelist li a:hover {
+	text-decoration: underline;
+}
+
+
+/* 町名リンク一覧 */
+.search .townlist {}
+
+
+/* 検索結果 */
+.search .result {}
+
+
+/* ○○○物件中の○～○件を表示します */
+.search .result .found {
+	margin: 30px 0 0;
+	text-align: left;
+}
+
+.search .result .found p {
+	color: #666;
+	letter-spacing: 2px;
+}
+
+.search .result .found .color_txt {
+	color: #1e375a;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 0;
+}
+
+
+/* ページャー＆ソート機能 レイアウト */
+
+.search .result .pager_sort_wrap {
+	margin: 1em 0 2em;
+}
+
+.search .result .pager {
+	float: left;
+	padding-top: 5px;
+	width: 62%;
+}
+
+
+/* ソート機能 */
+
+.search .result .searchSortArea {
+	display: inline-block;
+	float: right;
+}
+
+.search .result .searchSortArea.limit-search {
+	margin-right: 20px;
+}
+
+.search .result .searchSortArea .head-txt {
+	font-weight: bold;
+}
+
+.search .result .searchSortArea select {
+	font-size: inherit;
+	padding: 5px 10px;
+}
+
+.search .result .searchSortArea option {
+	padding: 5px 10px;
+}
+
+
+/* 1件あたりのマンション概要 */
+.search .result .items .item {
+	position: relative;
+}
+
+/* .contact_wrap - 売り出し中物件●●件など*/
+.search .items .contact_wrap {
+	margin: 0;
+	position: absolute;
+	right: 2em;
+	top: 2em;
+	z-index: 100;
+}
+
+.search .items .contact_wrap .contact-inner-list {
+	margin: 0;
+	text-align: right;
+	width: auto;
+}
+
+.search .items .contact_wrap .contact-inner-list li {
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0 0 0 4px;
+}
+
+.search .items .contact_wrap .contact-inner-list .sale-count {
+	background: #e3e9f1;
+	border-radius: 2px;
+	color: #003e72;
+	letter-spacing: 1px;
+	padding: 6px 10px 4px 12px;
+	vertical-align: top;
+}
+
+.search .items .contact_wrap .contact-inner-list .sale-count:hover {
+	background: #b8c7dc;
+	cursor: pointer;
+}
+
+.search .items .contact_wrap .contact-inner-list .sale-count a {
+	color: #003e72;
+	font-weight: bold;
+}
+
+.search .items .contact_wrap .contact-inner-list .count {
+	color: #c00004;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.search .items .contact_wrap .contact-inner-list .button {
+	border-radius: 2px;
+	background: #be7e3f;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 6px 8px 4px 12px;
+}
+
+.search .items .contact_wrap .contact-inner-list .button:hover {
+	background: #a2b3cc;
+}
+
+/* --------- .contact_wrap ここまで --------- */
+
+.search .result .item {
+	border: 1px solid #ddd;
+	margin: 0 auto 1em;
+	padding: 2em;
+}
+
+.search .result .item:hover {
+	background: #f0f2f5;
+	border-color: #698a9d;
+	cursor: pointer;
+}
+
+.search .result .item .name {
+	padding: 10px 0 30px;
+	text-align: left;
+}
+
+.search .result .item .name a {
+	color: #1e375a;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.search .result .item .thumb {
+	background: #f6f6f6;
+	float: left;
+	margin-right: 30px;
+	text-align: center;
+	width: 430px;
+}
+
+.search .result .item .thumb .img_wrap {
+	text-align: center;
+}
+
+.search .result .item .thumb .img_wrap .img {
+	border: 10px solid #f6f6f6;
+	display: inline-block;
+	max-height: 190px;
+	max-width: 190px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.search .result .item .info_wrap {
+	float: right;
+	overflow: hidden;
+	padding-top: 10px;
+	width: 680px;
+	zoom: 1;
+}
+
+.search .result .item .info_wrap .left {
+	float: left;
+	width: 49%;
+}
+
+.search .result .item .info_wrap .right {
+	float: right;
+	width: 49%;
+}
+
+.search .result .item .info_wrap p {
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 160%;
+	margin: 4px 0 1em;
+	min-height: 19px;
+	padding-left: 90px;
+	position: relative;
+	text-align: left;
+}
+
+.search .result .item .info_wrap p:before {
+	background: #eee;
+	border: 1px solid #ccc;
+	display: inline-block;
+	left: 0;
+	padding: 3px 6px 1px 9px;
+	position: absolute;
+	text-align: center;
+	top: -4px;
+	width: 60px;
+}
+
+.search .result .item .info_wrap .add:before {
+	content: "所在地";
+}
+
+.search .result .item .info_wrap .kotsu:before {
+	content: "交通";
+}
+
+.search .result .item .info_wrap .chiku:before {
+	content: "築年月";
+}
+
+.search .result .item .info_wrap .kai:before {
+	content: "階建";
+}
+
+.search .result .item .info_wrap .ko:before {
+	content: "総戸数";
+}
+
+.search .result .item .info_wrap .sekou:before {
+	content: "施工会社";
+}
+
+.search .result .item .info_wrap .kanri:before {
+	content: "管理会社";
+}
+
+.search .result .item .info_wrap .bunjo:before {
+	content: "分譲会社";
+}
+
+.search .result .item .info_wrap .kotsu {
+	clear: both;
+}
+
+.search .result .item .info_wrap .kotsu span {
+	display: inline-block;
+	line-height: 180%;
+}
+
+.search .result .item .info_wrap .kotsu span:after {
+	content: ",";
+	display: inline-block;
+	margin: 0 3px 0 6px;
+}
+
+.search .result .item .info_wrap .kotsu span:last-child:after {
+	content: none;
+}
+
+/* 販売中物件リスト表示エリア */
+.search .result .item .box {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.search .result .item .box .box-head-txt {
+	background: #fff;
+	border-bottom: 1px solid #b3b3b3;
+	color: #1e375a;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 230%;
+	margin: 0 0 1px;
+	padding: 5px 0 3px;
+	text-align: left;
+}
+
+.search .result .item .box .box-head-txt .head-wrap {
+	display: inline-block;
+	padding: 0 80px;
+}
+
+.search .result .item .box .box-head-txt span {
+	display: inline-block;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.search .result .item .box .box-head-txt .kakaku,
+.search .result .item .box .box-head-txt .senyu,
+.search .result .item .box .box-head-txt .saiko {
+	width: 110px;
+}
+
+.search .result .item .box .box-head-txt .madori {
+	width: 170px;
+}
+
+.search .result .item .box .box-head-txt .kai {
+	width: 50px;
+}
+
+.search .result .item .box .box-head-txt .genkyo {
+	width: 100px;
+}
+
+.search .result .item .box li {
+	background: #fff;
+	border-bottom: 1px solid #e8e8e8;
+	display: block;
+	margin: 0 0 1px;
+	padding: 5px 0 3px;
+	position: relative;
+	text-align: left;
+}
+
+.search .result .item .box li:hover {
+	background: #d5dfe8;
+}
+
+.search .result .item .box li:before {
+	background: #e3e9f1;
+	border-bottom: 1px solid #f6f6f6;
+	border-radius: 2px;
+	color: #1e375a;
+	content: "売出中";
+	display: inline-block;
+	font-size: 11px;
+	left: 6px;
+	line-height: 1;
+	margin-top: -13px;
+	padding: 7px 5px 7px 7px;
+	position: absolute;
+	top: 50%;
+}
+
+.search .result .item .box li:after {
+	color: #1e375a;
+	content: "\f105";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: 30px;
+	height: auto;
+	line-height: 1;
+	margin-top: -15px;
+	position: absolute;
+	right: 3%;
+	text-align: right;
+	top: 50%;
+	width: auto;
+}
+
+.search .result .item .box li a {
+	color: #204462;
+	display: block;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+.search .result .item .box li .shintyaku-span:before {
+	background: url(../img/common/icon_shintyakubukken_ichiran.png) no-repeat center;
+	background-size: contain;
+	/* border-bottom: 1px solid #f6f6f6; */
+	border-radius: 2px;
+	color: #ffffff;
+	content: "";
+	display: inline-block;
+	font-size: 11px;
+	height: 15px;
+	/* height: 25px; */
+	left: 59px;
+	line-height: 1;
+	margin-top: -13px;
+	position: absolute;
+	top: 60%;
+	width: 45px;
+}
+
+.search .result .item .box li .info-wrap {
+	display: inline-block;
+	min-height: 40px;
+	padding: 0 80px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.search .result .item .box li .info-wrap span {
+	display: inline-block;
+	line-height: 40px;
+	padding: 0 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.search .result .item .box li .info-wrap .kakaku {
+	color: #c00004;
+	font-size: 17px;
+	font-weight: bold;
+	width: 110px;
+}
+
+.search .result .item .box li .info-wrap .kakaku .s-txt {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0;
+}
+
+.search .result .item .box li .info-wrap .senyu {
+	width: 110px;
+}
+
+.search .result .item .box li .info-wrap .madori {
+	width: 170px;
+	word-break: break-all;
+}
+
+.search .result .item .box li .info-wrap .kai {
+	width: 50px;
+}
+
+.search .result .item .box li .info-wrap .saiko {
+	width: 110px;
+}
+
+.search .result .item .box li .info-wrap .genkyo {
+	width: 100px;
+}
+
+/* データ件数が多いときに中身をたたんでおく→「もっと見る」で全件表示 */
+.search .result .item .box .more-button {
+	background: #eaeaea;
+	border-bottom: 1px solid #b3b3b3;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 35px;
+	margin: 0 0 1px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.search .result .item .box .more-button:hover {
+	background: #d5dfe8;
+}
+
+.search .result .item .box .more-button span {
+	color: #204462;
+	letter-spacing: 2px;
+	line-height: 35px;
+	padding-left: 3px;
+}
+
+.search .result .item .box .more-button.open {
+	display: none;
+}
+
+.search .result .item .box .close-button {
+	background: #fdfdfd;
+	border: 1px solid #004166;
+	font-size: 12px;
+	height: 30px;
+	margin-top: 2px;
+	text-align: center;
+}
+
+.search .result .item .box .close-button:before,
+.search .result .item .box .close-button:after {
+	content: none;
+}
+
+.search .result .item .box .close-button span {
+	color: #004166;
+	line-height: 28px;
+}
+
+.search .result .item .box .kakusu-list {
+	display: none;
+}
+
+
+/*----------------------------------------------------
+	 .brand ブランドから探す
+----------------------------------------------------*/
+/* ----- 基本的には.searchのCSS上書き＋α ----- */
+
+.search.brand {
+	padding-bottom: 60px;
+}
+
+.search.brand .tab_body .prefecture_list_table .linklist th {
+	background: #dee7f5;
+	border-bottom: 1px solid #c9cfd8;
+	color: #5b5e63;
+	padding: 20px 10px;
+	vertical-align: middle;
+	width: 20%;
+}
+
+.search.brand .tab_body .prefecture_list_table .linklist h3 {
+	background: none;
+	border: none;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.search.brand .tab_body .prefecture_list_table .linklist h3 span {
+	font-weight: bold;
+}
+
+.search.brand .tab_body .prefecture_list_table .linklist td {
+	border: 1px solid #efefef;
+	border-bottom: 1px solid #e5e9ef;
+	padding: 20px 5px;
+	width: 80%;
+}
+
+.search.brand .tab_body .brand_button_wrap ul {
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.search.brand .tab_body .brand_button_wrap li {
+	float: left;
+	font-size: 15px;
+	vertical-align: middle;
+	width: 23.6%;
+	margin: 0 0 12px 10px;
+}
+
+
+/*----------------------------------------------------
+	 .railway 路線・駅から探す
+----------------------------------------------------*/
+/* line/ ----- 基本的には.searchのCSS上書き＋α ----- */
+
+.railway div.tab_body {
+	border: none;
+	padding: 0 30px 60px;
+}
+
+/* 「路線」別 一覧ページ --- line/xxxxx.html ----- */
+
+.line {}
+
+.line .itembody .kakusu-list {
+	display: block;
+}
+
+.line .itembody .more-button {
+	background: #f0f0f0;
+	border-bottom: 1px solid #c9cfd8;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 30px;
+	margin: 0 0 1px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.line .itembody .more-button.open {
+	display: none;
+}
+
+.line .itembody .more-button span {
+	color: #204462;
+	letter-spacing: 2px;
+	line-height: 32px;
+	padding-left: 3px;
+}
+
+.line .itembody .close-button {
+	clear: both;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 94%;
+	text-align: center;
+	text-decoration: underline;
+	width: 6%;
+}
+
+.line .itembody .close-button span {
+	color: #004166;
+	display: block;
+	line-height: 1.3;
+}
+
+.line .itembody .search_button_wrap {
+	margin: 20px auto;
+}
+
+/* ページ下部の.linelist - Defaultですべて開いた状態にして開閉動作も不要 */
+.searchRailroadBottom .itembody .more-button,
+.searchRailroadBottom .itembody .close-button {
+	display: none;
+}
+
+.searchRailroadBottom .itembody .kakusu-list {
+	display: block;
+}
+
+
+/*----------------------------------------------------
+	.buy_sell 購入相談,売却相談
+----------------------------------------------------*/
+
+.buy_sell .wrap03 {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.buy_sell .section-top {
+	padding: 0 0 40px;
+}
+
+.buy_sell .block-content {
+	padding: 0px 0 20px;
+}
+
+.buy_sell .midashi {
+	margin: 90px 0 40px;
+}
+
+.buy_sell .midashi img {
+	height: 40px;
+	width: auto;
+}
+
+.buy_sell .position-relative {
+	margin: 0 auto;
+	position: relative;
+	width: 930px;
+}
+
+.buy_sell .contact {
+	bottom: 70px;
+	left: 0;
+	right: 0;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+}
+
+.buy_sell .contact span,
+.buy_sell .contact2 span {
+	display: inline-block;
+	width: 300px;
+}
+
+.buy_sell .contact2 {
+	background: #fff;
+	padding: 30px 123px 0;
+	text-align: center;
+}
+
+.buy_sell .seido-riyousya {
+	margin: 0 auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.buy_sell .seido-riyousya .inr-wrap {
+	display: inline-block;
+	margin: 0 20px;
+	vertical-align: middle;
+}
+
+.buy_sell .meister {}
+
+.buy_sell .shousai {}
+
+.buy_sell .koe {}
+
+.buy_sell .seido-riyousya a:hover img,
+.buy_sell .banner1 a:hover img {
+	-ms-filter: "alpha(opacity=80)";
+	opacity: .8;
+}
+
+.buy_sell .banner1 {
+	margin: 60px 0 50px;
+	text-align: center;
+}
+
+.buy_sell .banner1 a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.buy_sell .block-txt p {
+	color: #000;
+	font-size: 13px;
+	margin: 30px 0;
+}
+
+.buy_sell .konyu-banner-bg {
+	text-align: center;
+}
+
+/* sell-wrap（.buy-wrapの上書きなど）*/
+.buy_sell .sell-wrap .contact {
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	padding: 0 120px;
+	position: absolute;
+}
+
+.buy_sell .sell-wrap .contact2 {
+	background: #fff;
+	padding: 30px 150px 0;
+}
+
+.buy_sell .sell-wrap .contact .left,
+.buy_sell .sell-wrap .contact2 .left {
+	float: left;
+}
+
+.buy_sell .sell-wrap .contact .right,
+.buy_sell .sell-wrap .contact2 .right {
+	float: right;
+	position: relative;
+}
+
+.buy_sell .sell-wrap .contact .right a:hover,
+.buy_sell .sell-wrap .contact2 .right a:hover {
+	-ms-filter: "alpha(opacity=80)";
+	opacity: .8;
+}
+
+.buy_sell .sell-wrap .img09 {
+	max-width: 930px;
+}
+
+.buy_sell .sell-wrap .img-wrap {
+	text-align: center;
+}
+
+.buy_sell .sell-wrap .teian-img {
+	padding: 30px 0 0;
+}
+
+.buy_sell .sell-wrap p.caption {
+	text-align: right;
+	margin: 30px 0 0;
+}
+
+.buy_sell .sell-wrap .seido-riyousya {
+	padding-top: 30px;
+}
+
+.buy_sell .sell-wrap .seido-riyousya .inr-wrap {
+	margin: 0 12px;
+}
+
+.buy_sell .sell-wrap .midashi.txt-c {
+	text-align: center;
+}
+
+.buy_sell .sell-wrap .guarantee-table {
+	margin: 30px 0;
+}
+
+.buy_sell .sell-wrap table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	font-size: 12px;
+	line-height: 1.8;
+	margin: 0 0 20px;
+	width: 100%;
+}
+
+.buy_sell .sell-wrap .guarantee-table th {
+	background: #003966;
+	color: #fff;
+	font-weight: normal;
+	padding: 8px 8px;
+	text-align: left;
+}
+
+.buy_sell .sell-wrap .guarantee-table .firstChild {
+	font-size: 120%;
+	text-align: center;
+}
+
+.buy_sell .sell-wrap .guarantee-table td {
+	background: #fff;
+	border: 1px solid #a5a5a5;
+	color: #4e3d35;
+	padding: 8px 8px;
+	text-align: center;
+	width: 25%;
+}
+
+
+/*----------------------------------------------------
+	.mansion マンション詳細
+----------------------------------------------------*/
+
+.mansion .pageHeadWrap {
+	background: #f6f6f6;
+	padding-bottom: 1px;
+}
+
+/* 物件共通のぱんくず ------------- */
+.mansion #pankuzu {
+	margin: 0 auto;
+	width: 1200px;
+	z-index: 1000;
+}
+
+.mansion #pankuzu .body {
+	margin: 0;
+	max-width: 55%;
+}
+
+.mansion #pankuzu .body .selected {
+	display: inline-block;
+}
+
+.mansion #pankuzu a span {
+	text-decoration: underline;
+}
+
+.mansion #pankuzu a:hover span {
+	text-decoration: none;
+}
+
+/* 物件TOPのぱんくず ------------- */
+.mansion #pankuzu {
+	color: #fff;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
+
+.mansion #pankuzu a {
+	color: #fff;
+}
+
+/* 物件TOP以外のぱんくず */
+.mansion #pankuzu.pankuzu2 {
+	color: #061429;
+	position: static;
+}
+
+.mansion #pankuzu.pankuzu2 a {
+	color: #061429;
+}
+
+/* ----------------------------- */
+
+.mansion .page-title {
+	margin: 30px 0;
+}
+
+.mansion .page-title .title-en {
+	display: inline-block;
+	font-family: 'Yantramanav', sans-serif;
+	font-size: 56px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin: 0;
+	vertical-align: sub;
+}
+
+.mansion .page-title .title-ja {
+	color: #1e375a;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0 10px;
+	position: static;
+	vertical-align: inherit;
+}
+
+.mansion .page-title .title-ja:before {
+	content: none;
+}
+
+.mansion .pageHeadWrap .page-title {
+	margin: 45px 0 60px;
+}
+
+.mansion .pageHeadWrap .page-title .title-ja {
+	color: #061429;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: inherit;
+	letter-spacing: 3px;
+	line-height: 1;
+	margin: 15px 0 0;
+	padding: 1em 0 0;
+	position: relative;
+}
+
+.mansion .pageHeadWrap .page-title .title-ja:before {
+	content: "";
+}
+
+.mansion .pageHeadWrap .page-title .title-ja2 {
+	color: #1e375a;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 48px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin: 0;
+	padding: 0 10px;
+	position: static;
+	vertical-align: inherit;
+}
+
+.mansion .main-wide {
+	width: 100%;
+}
+
+.mansion .areaWrap .block-title {
+	margin-bottom: 1.8em;
+}
+
+.mansion .areaWrap {
+	margin: 0 auto 90px;
+	width: 1200px;
+}
+
+
+/* bg-change-color制御 ---------- */
+.mansion .simpleInfoArea_wrap {
+	margin-top: -50px;
+}
+
+.mansion .bg-change-color.white {
+	background: #fff;
+	padding: 0;
+}
+
+.mansion .bg-change-color.gray {
+	background: #f6f6f6;
+	margin-bottom: 70px;
+	padding: 30px 0 50px;
+}
+
+.mansion .bg-change-color.white .areaWrap {
+	margin: 0 auto 90px;
+}
+
+.mansion .bg-change-color.gray .areaWrap {
+	margin: 0 auto 30px;
+}
+
+.mansion .bg-change-color .areaWrap.saleWrap {
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+.mansion .bg-change-color.gray.last {
+	margin-bottom: 0;
+	padding-bottom: 60px;
+}
+
+
+/* .contact_wrap - 売り出し中物件●●件など*/
+.mansion .contact_wrap {
+	margin: 0 auto;
+	min-width: 1200px;
+	position: relative;
+	width: 70%;
+}
+
+.mansion .contact_wrap .contact-inner-list {
+	margin: 0;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 6px;
+	width: auto;
+	z-index: 1000;
+}
+
+.mansion .contact_wrap .contact-inner-list li {
+	color: #fff;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	margin: -1px 2px 4px;
+}
+
+.mansion .contact_wrap .contact-inner-list .sale-count {
+	background: url(../img/mansion/mv_txt_bg-075.png) repeat;
+	border-radius: 2px;
+	color: #003e72;
+	letter-spacing: 1px;
+	padding: 6px 10px 4px 12px;
+	vertical-align: top;
+}
+
+.mansion .contact_wrap .contact-inner-list .sale-count:hover {
+	background: #b8c7dc;
+	cursor: pointer;
+}
+
+.mansion .contact_wrap .contact-inner-list .sale-count a {
+	color: #003e72;
+	font-weight: bold;
+}
+
+.mansion .contact_wrap .contact-inner-list .count {
+	color: #c00004;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.mansion .contact_wrap .contact-inner-list .button {
+	border-radius: 2px;
+	background: #be7e3f;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 6px 8px 4px 12px;
+}
+
+.mansion .contact_wrap .contact-inner-list .button:hover {
+	background: #a2b3cc;
+}
+
+
+/* bxSlider
+.mansion .mainV_wrap {
+	min-width: 1200px;
+}
+
+.mansion .mainV {
+	overflow: hidden;
+	padding: 33% 0 0;
+	position: relative;
+}
+
+.mansion .mainV .mainVimg {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.mansion .mainV .mainVimg ul {
+	margin: 0;
+	padding: 0;
+}
+
+.mansion .mainV .mainVimg li {
+	list-style: none;
+	width: 100%;
+}
+
+.mansion .mainV .mainVimg li img {
+	float: left;
+	margin: 0;
+	width: 50%;
+}
+
+.mansion .bx-wrapper {
+	background: #fff;
+	margin-bottom: 0;
+}
+
+.mansion .bx-wrapper .bx-viewport {
+	background: #fff;
+	box-shadow: none;
+	border: none;
+	left: 0;
+}
+
+.mansion .bx-controls {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 48%;
+	width: 100%;
+	z-index: 1500;
+}
+
+.mansion .custom-pager {
+	bottom: 20px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 1500;
+}
+
+.mansion .custom-pager .bx-pager {
+	text-align: center;
+}
+
+.mansion .custom-pager .bx-pager .bx-pager-item {
+	display: inline-block;
+	margin: 0 6px;
+}
+
+.mansion .bx-pager.bx-default-pager a {
+	background: #ddd;
+	border-radius: 50%;
+	color: #ddd;
+	display: block;
+	font-size: 9px;
+	line-height: 12px;
+	width: 12px;
+}
+
+.mansion .bx-pager.bx-default-pager a:hover,
+.mansion .bx-pager.bx-default-pager a.active {
+	background: #204462;
+	color: #204462;
+	opacity: 1;
+	transition: none;
+}
+
+.mansion .bx-wrapper .bx-loading {
+	background: url(../img/sale/_/bx_loader.gif) center center no-repeat #fff;
+}
+
+.mansion .bx-wrapper .bx-prev {
+	background: url(../img/sale/_/controls.png) no-repeat 0 -32px;
+}
+
+.mansion .bx-wrapper .bx-next {
+	background: url(../img/sale/_/controls.png) no-repeat -43px -32px;
+}
+
+.mansion .bx-wrapper .bx-controls-auto .bx-start {
+	background: url(../img/sale/_/controls.png) -86px -11px no-repeat;
+}
+
+.mansion .bx-wrapper .bx-controls-auto .bx-stop {
+	background: url(../img/sale/_/controls.png) -86px -44px no-repeat;
+}
+--------------------------------------*/
+
+
+/* ----- mansion name text ----- */
+.mansion .mainV .mainVtxt {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 33%;
+	width: 100%;
+	z-index: 1000;
+}
+
+.mansion .mainV .mainVtxt .hd1 {
+	background: url(../img/mansion/mv_txt_bg-065.png) center repeat-y;
+	display: inline-block;
+	margin: 0;
+	padding: 20px 60px 23px;
+	text-align: center;
+	width: 1080px;
+}
+
+.mansion .mainV .mainVtxt .hd1 .title-ja,
+.mansion .mainV .mainVtxt .hd1 .title-en {
+	color: #fff;
+}
+
+
+/* .mansionPageNavi
+--------------------------------------*/
+.mansionPageNavi {
+	background: #fff;
+	border-bottom: 1px solid #d2dae6;
+	margin-bottom: 50px;
+	min-height: 50px;
+	/*for test*/
+	position: relative;
+}
+
+.mansionPageNavi:after {
+	background: url(../img/mansion/pagenavi_btm_bg.png) repeat-x;
+	bottom: -51px;
+	content: "";
+	display: block;
+	height: 50px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.mansionPageNavi>ul {
+	margin: 0 auto;
+	letter-spacing: -5px;
+	padding: 0;
+	text-align: center;
+	width: 1200px;
+}
+
+.mansionPageNavi>ul li {
+	background: #fff;
+	border-right: 1px solid #d2dae6;
+	display: inline-block;
+	letter-spacing: normal;
+	position: relative;
+	width: 170px;
+}
+
+/* もっと見るボタン */
+.motto-miru-button:hover .nav-sub {
+	display: block;
+}
+
+.motto-miru-icon {
+	font-size: 19px;
+	margin-left: 10px;
+	position: relative;
+	top: 3px;
+	color: #c3c3c3;
+}
+
+.mansionPageNavi>ul li.tab1 {
+	border-left: 1px solid #d2dae6;
+	margin-left: -1px;
+}
+
+.mansionPageNavi>ul li:hover {
+	background: #7f91a5;
+}
+
+.mansionPageNavi>ul li.hear {
+	background: #00234b;
+}
+
+.mansionPageNavi>ul li.hear:after {
+	border-style: solid;
+	border-width: 0 15px 14px 15px;
+	border-color: transparent transparent #fff transparent;
+	bottom: -1px;
+	content: "";
+	height: 0;
+	left: 50%;
+	line-height: 0px;
+	_border-color: #000 #000 #fff #000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+	margin-left: -15px;
+	position: absolute;
+	width: 0;
+	z-index: 5;
+}
+
+.mansionPageNavi>ul>li>a {
+	color: #061429;
+	font-size: 14px;
+	line-height: 50px;
+	padding-bottom: 3px;
+}
+
+.mansionPageNavi ul li.hear a,
+.mansionPageNavi ul li:hover a,
+.mansionPageNavi ul li:hover .motto-miru-icon {
+	color: #fff;
+}
+
+/* サブメニュー */
+.mansionPageNavi ul li .nav-sub {
+	background: #ffffff;
+	border: 1px solid #c9cfd9;
+	border-bottom: 0;
+	display: none;
+	list-style: none;
+	margin: 0 0 0 7px;
+	padding: 0;
+	position: absolute;
+	right: -1px;
+	top: 100%;
+	z-index: 9000;
+	width: 170px;
+}
+
+.mansionPageNavi ul li .nav-sub:after {
+	bottom: -8px;
+	content: '';
+	left: -8px;
+	position: absolute;
+	right: -8px;
+	top: -8px;
+	z-index: -1;
+}
+
+.mansionPageNavi ul li .nav-sub.active {
+	animation: fade-in .25s;
+	-webkit-animation: fade-in .25s;
+	display: block;
+}
+
+.mansionPageNavi ul li .nav-sub li {
+	border-bottom: 1px solid #c9cfd9;
+}
+
+.mansionPageNavi ul li .nav-sub a {
+	/* color: #061429; */
+	color: #9a9a9a;
+	display: block;
+}
+
+.mansionPageNavi ul li .nav-sub a:hover {
+	color: #fff;
+}
+
+.mansionPageNavi ul li .nav-sub span {
+	display: block;
+	font-size: 12px;
+	letter-spacing: 2px;
+	padding: 10px 24px;
+}
+
+.mansionPageNavi ul li .nav-sub span.en {
+	display: none;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+
+/* .mansionPageNavi.style-between-content - ページの途中に設置のナビリンク群
+--------------------------------------*/
+.mansionPageNavi.style-between-content {
+	background: transparent;
+	border: none;
+	position: inherit;
+}
+
+.mansionPageNavi.style-between-content:after {
+	content: none;
+}
+
+.mansionPageNavi.style-between-content ul {
+	text-align: left;
+}
+
+.mansionPageNavi.style-between-content li {
+	background: #1e375a;
+	border: 1px solid #d2dae6;
+	margin: 1rem 1% 0;
+	width: calc(15% - 6px);
+	text-align: center;
+}
+
+.mansionPageNavi.style-between-content li:hover,
+.mansionPageNavi.style-between-content li.here:hover {
+	background-color: #7f91a5;
+}
+
+.mansionPageNavi.style-between-content li.here {
+	background: #1e375a;
+}
+
+.mansionPageNavi.style-between-content li.here:after {
+	content: none;
+}
+
+.mansionPageNavi.style-between-content li a {
+	color: #fff;
+	padding: 0;
+}
+
+
+/* =================================================== */
+
+/* Contents Head Simple Information */
+.mansion .simpleInfoArea tbody {
+	display: block;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+.mansion .simpleInfoArea tr {
+	display: block;
+	width: 100%;
+}
+
+.mansion .simpleInfoArea th {
+	background: transparent;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	vertical-align: middle;
+	width: 130px;
+}
+
+.mansion .simpleInfoArea th.sokosu {
+	padding-right: 0;
+}
+
+.mansion .simpleInfoArea td {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #e0e0e0;
+	font-size: 13px;
+	letter-spacing: 2px;
+	padding: 11px 20px 9px 0px;
+	vertical-align: middle;
+}
+
+.mansion .simpleInfoArea td.area1 {
+	border-right: 20px solid #f6f6f6;
+	width: 410px;
+}
+
+.mansion .simpleInfoArea td.area2 {
+	border-right: 20px solid #f6f6f6;
+	width: 140px;
+}
+
+.mansion .simpleInfoArea td.area3 {
+	width: 110px;
+}
+
+.mansion .simpleInfoArea td.area4 {
+	width: 430px;
+}
+
+.mansion .simpleInfoArea .first-area th {
+	width: 220px;
+}
+
+
+/* Sale Property - 販売中物件 */
+.mansion .list-sale {
+	list-style: none;
+	margin: 1.8em 0 0;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+}
+
+.mansion .list-sale li {
+	background: #fff;
+	display: inline-block;
+	margin: 0 6px 30px;
+	vertical-align: top;
+	width: 585px;
+}
+
+.mansion .list-sale li:hover {
+	background: #a2b3cc;
+}
+
+.mansion .list-sale a {
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.list-sale a:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.mansion .list-sale .info {
+	background: #fff;
+	border: 1px solid #c9cfd8;
+	overflow: hidden;
+	padding: 10px 15px 10px 10px;
+}
+
+.mansion .list-sale .img-wrap {
+	float: left;
+	height: 210px;
+	text-align: center;
+	width: 45%;
+}
+
+.mansion .list-sale .img-wrap img {
+	height: 100%;
+}
+
+.mansion .list-sale .img-wrap .inner {
+	margin: 10px 0 0;
+	padding: 3px;
+}
+
+.mansion .list-sale .data {
+	background: #c9cfd8;
+	float: right;
+	width: 50%;
+}
+
+.mansion .list-sale .data .inner {
+	overflow: hidden;
+	padding: 1px;
+}
+
+.mansion .list-sale .data table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	font-size: 12px;
+	line-height: 1.8;
+	width: 100%;
+}
+
+.mansion .list-sale .data th,
+.mansion .list-sale .data td {
+	border: none;
+	color: #333;
+	line-height: 250%;
+	padding: 2px 6px 0;
+}
+
+.mansion .list-sale .data th {
+	background: #ecf1f9;
+	font-weight: normal;
+	text-align: center;
+	width: 40%;
+}
+
+.mansion .list-sale .data td {
+	background: #fff;
+}
+
+.mansion .shintyaku {
+	height: 35px;
+	float: right;
+	width: 50%;
+}
+
+.mansion .shintyaku img {
+	height: 20px;
+}
+
+.mansion .list-sale .condition {
+	float: right;
+	font-size: 9px;
+	margin: 15px 0 0;
+	width: 50%;
+}
+
+.mansion .list-sale .condition .inner {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.mansion .list-sale .condition img {
+	float: left;
+	margin: 0;
+	max-width: 200px;
+}
+
+.mansion .list-sale .tail {
+	background: #d8e0ec;
+	padding: 15px;
+	text-align: center;
+	margin: 2px 0 0;
+}
+
+.mansion .list-sale .tail .shousai-button {
+	color: #3b3b3b;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+
+/* Premium site - プレミアムサイト */
+.mansion .premium-wrap .bg-photo-area {
+	display: block;
+	height: auto;
+	width: 30%;
+}
+
+.mansion .premium-wrap .img-photo {
+	display: block;
+	height: auto;
+	margin: 0;
+	width: 100%;
+}
+
+.mansion .premium-wrap .right {
+	padding-left: 5%;
+	width: 65%;
+}
+
+.mansion .premium-wrap .site-link {
+	margin-top: 40px;
+}
+
+.mansion .premium-wrap .button {
+	display: block;
+	margin: 15px auto 0;
+	width: 300px;
+}
+
+
+/* Consultation - お問い合わせ */
+.mansion .consul-wrap {
+	background: #fcfcfc;
+	border-radius: 2px;
+	padding: 10px 60px 30px;
+}
+
+.mansion .consul-wrap.bgc2 {
+	background: #f9f9f9;
+}
+
+.mansion .consul-wrap .left,
+.mansion .consul-wrap .right {
+	text-align: center;
+	width: 500px;
+}
+
+.mansion .consul-wrap .head-txt {
+	background: #f3f3f3;
+	border-bottom: 1px solid #c9cfd8;
+	border-top: 1px solid #c9cfd8;
+	color: #061429;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin: 20px 0;
+	padding: 15px 0 10px;
+}
+
+.mansion .consul-wrap .button {
+	display: block;
+	margin: 15px auto 0;
+	width: 300px;
+}
+
+
+/* BrilliaClub - ブリリアクラブ */
+.mansion .brilliaclub-wrap {
+	border-radius: 2px;
+}
+
+.mansion .brilliaclub-wrap.bgc2 {
+	background: #f9f9f9;
+}
+
+.mansion .brilliaclub-wrap .left,
+.mansion .brilliaclub-wrap .right {
+	padding: 30px 0;
+	text-align: center;
+	width: 575px;
+}
+
+.mansion .brilliaclub-wrap .left {
+	/* background: #fff; */
+}
+
+.mansion .brilliaclub-wrap .left img {}
+
+.mansion .brilliaclub-wrap .right {
+	padding: 30px 0;
+}
+
+
+.mansion .brilliaclub-wrap .right .block-txt {
+	text-align: left;
+}
+
+.mansion .brilliaclub-wrap .right .block-txt p {
+	font-size: 13px;
+	margin: 0 0 10px;
+}
+
+.mansion .brilliaclub-wrap .head-txt {
+	background: #f3f3f3;
+	border-bottom: 1px solid #c9cfd8;
+	border-top: 1px solid #c9cfd8;
+	color: #061429;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin: 20px 0;
+	padding: 15px 0 10px;
+}
+
+.mansion .brilliaclub-wrap .button {
+	display: block;
+	margin: 40px auto 0;
+	padding: 10px 0;
+}
+
+.mansion .brilliaclub-wrap .left_button {
+	float: left;
+	width: 45%;
+}
+
+.mansion .brilliaclub-wrap .right_button {
+	float: right;
+	width: 45%;
+}
+
+
+/* Outline - 物件概要 */
+.mansion .outline-wrap ul {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+
+.mansion .outline-wrap li {
+	display: block;
+	margin: 0 0 1.2em;
+	width: 100%;
+}
+
+.mansion .outline-wrap li.col2 {
+	float: left;
+	width: 50%;
+}
+
+.mansion .outline-wrap li.clr {
+	clear: both;
+	height: 1px;
+	margin: 0 0 -1px;
+	padding: 0;
+}
+
+.mansion .outline-wrap li .border_wrap {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0 0 1em;
+}
+
+.mansion .outline-wrap li .head-txt {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 28px;
+	vertical-align: top;
+	width: 200px;
+}
+
+.mansion .outline-wrap li p {
+	display: inline-block;
+	width: 990px;
+}
+
+.mansion .outline-wrap li span {
+	display: inline-block;
+	font-size: 15px;
+	letter-spacing: 2px;
+	line-height: 28px;
+}
+
+.mansion .outline-wrap li span.link-map {
+	background: #1e375a;
+	margin: 0 0 0 10px;
+	top: -1px;
+	position: relative;
+}
+
+.mansion .outline-wrap li span.link-map:hover {
+	background: #90aac1;
+}
+
+.mansion .outline-wrap li span.link-map a {
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	padding: 1px 14px 0 17px;
+}
+
+.mansion .outline-wrap li .kotsu-set {
+	display: block;
+}
+
+.mansion .outline-wrap li .kotsu-set span {
+	display: inline;
+}
+
+.mansion .outline-wrap li .kotsu:after {
+	content: "、";
+	display: inline-block;
+	width: auto;
+}
+
+.mansion .outline-wrap li .kotsu:last-child:after {
+	content: none;
+}
+
+
+/* Surrounding Facilities - 周辺の施設 */
+
+/* .near-shop-wrap */
+.mansion .near-shop-wrap.last {
+	padding-bottom: 60px;
+}
+
+.mansion .near-shop-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mansion .near-shop-wrap li.mansion-one-wrap {
+	background: url(../img/sale/_/bg_box.png) repeat;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 12px 10px;
+	padding: 1em 2em;
+	position: relative;
+	vertical-align: top;
+	width: 26.5%;
+}
+
+.mansion .near-shop-wrap li .bg-photo-area {
+	display: block;
+	min-height: 200px;
+}
+
+.mansion .near-shop-wrap li .img-photo {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 318px;
+}
+
+.mansion .near-shop-wrap li .shop-name {
+	font-size: 18px;
+	margin: 1em 0;
+	text-align: center;
+}
+
+
+/* Surrounding Mansion - 周辺の物件 */
+
+/* .near-mansion-wrap */
+.mansion .near-mansion-wrap.last {
+	padding-bottom: 60px;
+}
+
+.mansion .near-mansion-wrap h3 {
+	padding-top: 100px;
+}
+
+.mansion .near-mansion-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mansion .near-mansion-wrap li.mansion-one-wrap {
+	background: url(../img/sale/_/bg_box.png) repeat;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 12px 10px;
+	padding: 1em 2em 2em;
+	position: relative;
+	vertical-align: top;
+	width: 26.5%;
+}
+
+.mansion .near-mansion-wrap li.mansion-one-wrap:hover {
+	background: #f5f8fb;
+	border-color: #c9cfd8;
+}
+
+.mansion .near-mansion-wrap li .bg-photo-area {
+	display: block;
+	min-height: 200px;
+}
+
+.mansion .near-mansion-wrap li .img-photo {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 318px;
+}
+
+.mansion .near-mansion-wrap li .img-txt {
+	display: block;
+	height: 100px;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*「物件サイトor公式サイトはこちら」ボタン
+------------------------------------------- */
+.mansion .near-mansion-wrap .site-link {
+	background: #0e314e url(../img/top/_/bg_sitelink_btn2.png) repeat-x;
+	border: 2px solid #ddd;
+	font-size: 12px;
+	line-height: 30px;
+	margin: 6px 0 10px;
+	text-align: center;
+}
+
+.mansion .near-mansion-wrap .site-link:hover {
+	background-color: #23517a;
+}
+
+.mansion .near-mansion-wrap .site-link a {
+	color: #fff;
+	display: block;
+}
+
+/* 公式サイトのリンクがない場合.noneを追加する */
+.mansion .near-mansion-wrap .site-link.none {
+	background: transparent;
+	border-color: transparent;
+	height: 30px;
+}
+
+.mansion .near-mansion-wrap .box {
+	position: relative;
+	text-align: center;
+}
+
+.mansion .near-mansion-wrap .box ul {}
+
+.mansion .near-mansion-wrap .box li {
+	display: inline-block;
+	float: none;
+	height: 210px;
+	margin: 0 1px 1.4em;
+	padding: 8px 0;
+	vertical-align: top;
+	width: 48%;
+}
+
+.mansion .near-mansion-wrap .box li:hover {
+	background: #e3eef1;
+}
+
+.mansion .near-mansion-wrap .box li a {
+	border-bottom: 1px solid #204462;
+	color: #204462;
+	display: inline;
+	font-size: 11px;
+}
+
+.mansion .near-mansion-wrap .box li:hover a {
+	border: none;
+	color: #8d9fae;
+}
+
+.mansion .near-mansion-wrap .box li .madorizu-waku {
+	display: block;
+	height: 145px;
+}
+
+.mansion .near-mansion-wrap .box li .madori-img {
+	border: 1px solid #eee;
+	margin: 0 auto;
+	max-height: 140px;
+	max-width: 140px;
+}
+
+.mansion .near-mansion-wrap .box li:hover .madori-img {
+	border-color: #f6f6f6;
+}
+
+.mansion .near-mansion-wrap .box li .kai:after,
+.mansion .near-mansion-wrap .box li .madori:after {
+	content: "/";
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.mansion .near-mansion-wrap .box li .nintei,
+.mansion .near-mansion-wrap .box li .change {
+	display: block;
+	margin: 8px auto 0;
+	max-width: 140px;
+}
+
+.mansion .near-mansion-wrap .box .more-button {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	position: absolute;
+	right: -12px;
+	text-decoration: underline;
+	top: 0;
+}
+
+.mansion .near-mansion-wrap .box .more-button:hover,
+.mansion .near-mansion-wrap .box .close-button span:hover {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.mansion .near-mansion-wrap .box .more-button.open {
+	display: none;
+}
+
+.mansion .near-mansion-wrap .box .close-button {
+	display: block;
+	font-size: 14px;
+	height: auto;
+	margin: -1em 0 0;
+	padding: 0;
+	width: auto;
+}
+
+.mansion .near-mansion-wrap .box .close-button:hover {
+	background: none;
+}
+
+.mansion .near-mansion-wrap .box .close-button span {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0 0 85%;
+	text-decoration: underline;
+}
+
+.mansion .near-mansion-wrap .box .kakusu-list {
+	display: none;
+}
+
+
+/* Mansion list - 物件一覧
+--------------------------------------------
+検索一覧ページと同じ見た目なので特に変更していません
+-------------------------------------------- */
+
+
+/* .mansion .buy_sell - 購入相談 と 売却相談
+-------------------------------------------- */
+.mansion .buy_sell .block-sub-title {
+	color: #003e72;
+	font-size: 21px;
+	line-height: 1.2;
+	overflow: hidden;
+}
+
+.mansion .buy_sell .block-sub-title span {
+	display: inline-block;
+	font-weight: bold;
+	position: relative;
+}
+
+.mansion .buy_sell .block-sub-title span:before,
+.mansion .buy_sell .block-sub-title span:after {
+	border-bottom: 5px dotted #c9cfd8;
+	content: "";
+	display: inline-block;
+	height: 0;
+	margin: -2px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+}
+
+.mansion .buy_sell .block-sub-title span:before {
+	left: -250px;
+}
+
+.mansion .buy_sell .block-sub-title span:after {
+	right: -250px;
+}
+
+.mansion .buy_sell p.caption {
+	text-align: right;
+	margin: 30px 0 0;
+}
+
+.mansion .buy_sell .consul-wrap .head-txt {
+	background: #f7f7f7;
+}
+
+.mansion .buy_sell .consul-wrap .button {
+	margin: 40px auto 0;
+}
+
+.mansion .buy_sell .img-wrap {
+	text-align: center;
+}
+
+.mansion .buy_sell .bnr-wrap {
+	border: 1px solid #044064;
+	margin: 0 auto;
+	width: 1080px;
+}
+
+.mansion .buy_sell .bnr-wrap th {
+	background: #044064;
+	text-align: center;
+}
+
+.mansion .buy_sell .bnr-wrap th img {
+	height: 30px;
+	padding: 3px 0 5px;
+}
+
+.mansion .buy_sell .bnr-wrap td {
+	border: 1px solid #044064;
+	padding: 30px 25px;
+	text-align: center;
+}
+
+.mansion .buy_sell .bnr-wrap td .img-txt {
+	height: 140px;
+}
+
+.mansion .buy_sell .bnr-wrap .consul-wrap {
+	background: none;
+	padding: 0;
+}
+
+.mansion .buy_sell .bnr-wrap .consul-wrap .head-txt {
+	background: #fafafa;
+	margin-bottom: 10px;
+}
+
+
+/* mansion > konyu - 物件購入相談 */
+
+/* Brillia-link */
+.mansion .buy_sell .brillia-link {
+	border: 1px solid #c9cfd8;
+}
+
+.mansion .buy_sell .brillia-link-all {
+	background: #fcfcfc;
+	margin: 0 auto;
+	padding: 15px 0;
+	position: relative;
+}
+
+.mansion .buy_sell .brillia-logo {
+	display: block;
+	left: 30px;
+	margin-top: -30px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 150px;
+}
+
+.mansion .buy_sell .brillia-logo .brillia-link-logo {
+	width: 110px;
+}
+
+.mansion .buy_sell .brillia-logo .site-selection {
+	height: 12px;
+	padding-top: 10px;
+}
+
+.mansion .buy_sell .brillia-link-list {
+	float: right;
+	margin-right: 10px;
+	width: 980px;
+}
+
+.mansion .buy_sell .brillia-link ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mansion .buy_sell .b-link {
+	color: #fff;
+	float: left;
+	line-height: 2;
+	margin-right: 1%;
+	text-align: left;
+	width: 24%;
+}
+
+.mansion .buy_sell .b-link a {
+	color: #014165;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.mansion .buy_sell .b-link a:hover {
+	color: #014165;
+	text-decoration: underline;
+}
+
+.mansion .buy_sell .b-link .fa {
+	margin-right: 3px;
+}
+
+
+/* mansion > baikyaku - 物件売却相談 */
+.mansion .buy_sell .consul-wrap.bgc2 {
+	background: #f9f9f9;
+}
+
+.mansion .buy_sell .consul-wrap .head-txt.bgc2 {
+	background: #fefefe;
+}
+
+.mansion .buy_sell .teian-img {
+	margin: 0 auto;
+	padding: 30px 0 0;
+	width: 930px;
+}
+
+.mansion .buy_sell .img09 {
+	/*	background: #f9f9f9;*/
+	padding: 20px 75px;
+	width: 930px;
+}
+
+.mansion .buy_sell.konyu .seido-riyousya .shousai,
+.mansion .buy_sell.konyu .seido-riyousya .koe {
+	width: 300px;
+}
+
+.mansion .buy_sell .seido-riyousya.ptn2 {
+	padding-top: 60px;
+}
+
+.mansion .buy_sell.baikyaku .seido-riyousya img {
+	width: 400px;
+}
+
+.mansion .buy_sell .midashi {
+	text-align: center;
+}
+
+.mansion .buy_sell .sell-wrap .guarantee-table {
+	margin: 60px auto 0;
+	width: 930px;
+}
+
+.mansion .buy_sell .img05 {
+	background: #fff;
+	padding: 75px 75px 30px;
+	width: 930px;
+}
+
+.mansion .buy_sell .img06 {
+	background: #fff;
+	padding: 75px;
+	width: 930px;
+}
+
+.mansion .buy_sell .img_valueup {
+	margin: 30px auto;
+	width: 505px;
+}
+
+.mansion .buy_sell .inline-link {
+	color: #003e72;
+	display: inline-block;
+	text-decoration: underline;
+}
+
+.mansion .buy_sell .inline-link:hover {
+	color: #38678e;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.mansion .buy_sell .service-menu-list {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.mansion .buy_sell .service-menu-list .card {
+	background: #fff;
+	border: 1px solid #66839d;
+	display: inline-block;
+	margin-right: 30px;
+	margin-bottom: 2em;
+	position: relative;
+	vertical-align: top;
+	width: 340px;
+}
+
+.mansion .buy_sell .service-menu-list .card3,
+.mansion .buy_sell .service-menu-list .card5 {
+	margin-right: 0;
+}
+
+.mansion .buy_sell .service-menu-list .card a {
+	display: block;
+	text-decoration: none;
+}
+
+.mansion .buy_sell .service-menu-list .card a:hover {
+	-ms-filter: "alpha(opacity=70)";
+	opacity: 0.7;
+}
+
+.mansion .buy_sell .service-menu-list .card-title {
+	background: #ccd6de;
+	color: #00315c;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 14px 10px 10px;
+	text-align: center;
+}
+
+.mansion .buy_sell .service-menu-list .card-img {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.mansion .buy_sell .service-menu-list .img {
+	width: 150px;
+}
+
+.mansion .buy_sell .service-menu-list .card-content {
+	padding: 10px 15px;
+}
+
+.mansion .buy_sell .service-menu-list .card-text {
+	text-align: left;
+}
+
+.mansion .buy_sell .service-menu-list .card-link {
+	background: #f6f6f6;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.mansion .buy_sell .service-menu-list .card-link span {
+	color: #fff;
+	background: #21528d;
+	border-bottom: 2px solid #ccc;
+	margin: 0;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.mansion .buy_sell .value-up-service {
+	margin: 40px 0 0;
+}
+
+.mansion .buy_sell .value-up-service th {
+	background: #e7ecf5;
+	border-bottom: 1px dotted #ccc;
+	color: #666;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1.8;
+	padding: 5px 10px;
+	text-align: center;
+	vertical-align: middle;
+	width: 200px;
+}
+
+.mansion .buy_sell .value-up-service td {
+	border-bottom: 1px dotted #ccc;
+	font-size: 13px;
+	line-height: 1.8;
+	padding: 15px 20px;
+	vertical-align: middle;
+}
+
+.mansion .buy_sell .value-up-service .s-txt {
+	color: #999;
+	font-size: 11px;
+	margin-top: 1em;
+}
+
+.mansion .buy_sell .act_list {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mansion .buy_sell .act_list li {
+	display: inline-block;
+	margin: 10px 20px 10px 0;
+	width: 320px;
+}
+
+.mansion .buy_sell .act_list li h4 {
+	border-bottom: 1px solid #003366;
+	color: #003365;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 0 0 20px;
+	min-height: 38px;
+	padding: 20px 0;
+	text-align: left;
+}
+
+.mansion .buy_sell .act_list li h4.short {
+	padding: 20px 0 0;
+}
+
+/* ----------------------------------------------------
+ mansion > baikyaku - 物件売却相談 ～ この上までCSS未整理。*/
+
+.mansion .buy_sell .merit {
+	margin: 60px 0;
+}
+
+.mansion .buy_sell .merit table {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.mansion .buy_sell .merit td {
+	border: none;
+	vertical-align: middle;
+}
+
+.mansion .buy_sell .merit .b-logo {
+	width: 15%;
+}
+
+.mansion .buy_sell .merit .merit-inr-wrap {
+	padding-left: 40px;
+	width: 60%;
+}
+
+.mansion .buy_sell .merit .catch {
+	color: #014164;
+	display: table-cell;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.mansion .buy_sell .anshin ul {
+	margin: 0 auto;
+	padding-left: 1%;
+	width: 60%;
+}
+
+.mansion .buy_sell .anshin li {
+	display: inline-block;
+	text-align: center;
+	width: 24%;
+}
+
+.mansion .buy_sell .anshin li img {
+	display: block;
+	margin: 0 auto;
+	width: 70px;
+}
+
+.mansion .buy_sell .anshin li span {
+	color: #004165;
+	display: block;
+	margin: 10px 0 0;
+}
+
+.mansion .buy_sell .nintei {
+	margin: 40px 0 0;
+}
+
+.mansion .buy_sell .nintei img {
+	width: 930px;
+}
+
+.mansion .buy_sell .nintei img:first-child {
+	margin-bottom: 60px;
+}
+
+.mansion .buy_sell .midasi {
+	margin: 40px 0;
+	text-align: center;
+}
+
+.mansion .buy_sell .midasi img {
+	height: 40px;
+}
+
+
+/* mansion > photogallery - フォトギャラリー
+-------------------------------------------- */
+
+.mansion .photogallery .gallery-wrap {
+	text-align: center;
+}
+
+.mansion .photogallery .gallery-wrap>* {
+	box-sizing: border-box;
+}
+
+.mansion .photogallery li.photo-one-wrap {
+	background: url(../img/sale/_/bg_box.png) repeat;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	display: inline-block;
+	float: left;
+	height: 180px;
+	margin: 1.3em .917% 0;
+	padding: 10px 0 0;
+	vertical-align: top;
+	width: 18%;
+}
+
+.mansion .photogallery li.photo-one-wrap:hover {
+	background: #f5f8fb;
+	border-color: #c9cfd8;
+}
+
+.mansion .photogallery li .photo-area {
+	display: block;
+	min-height: 130px;
+	text-align: center;
+}
+
+.mansion .photogallery li .photo-area img {
+	display: inline-block;
+	height: auto;
+	max-height: 142px;
+	max-width: 94%;
+	width: auto;
+}
+
+.mansion .photogallery li .photo-txt {
+	display: inline-table;
+	font-size: 14px;
+	height: 40px;
+	line-height: 1.3;
+	margin: 0 auto;
+	padding-top: 5px;
+	text-align: center;
+	width: 90%;
+}
+
+.mansion .photogallery li .photo-txt span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* .js-colorbox - 設定の上書き */
+#cboxOverlay {
+	background: #000;
+}
+
+#cboxLoadedContent {
+	background: #fff;
+}
+
+#cboxLoadedContent {
+	padding: 0;
+	overflow: auto;
+	-moz-box-shadow: 0px 1px 10px #000;
+	-webkit-box-shadow: 0px 1px 10px #000;
+	box-shadow: 0px 1px 10px #000;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose,
+#cboxTitle {
+	top: -30px;
+}
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+	overflow: visible;
+}
+
+#cboxTitle {
+	color: #fff;
+}
+
+#inline-content {
+	/* インラインを使用する時のみ */
+	margin: 20px;
+}
+
+#ajax-wrap {
+	/* ajaxを使用する時のみ */
+	margin: 20px;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {
+	/* コントロール画像パス変更 */
+	background-image: url(../img/colorbox/photogallery/controls.png);
+}
+
+#cboxClose {
+	background-position: -50px 0;
+}
+
+#cboxNext {
+	background-position: -25px 0;
+}
+
+#cboxLoadingGraphic {
+	/* ローダー画像パス変更 */
+	background: url(../img/colorbox/photogallery/loading.gif) no-repeat center center;
+}
+
+
+/* mansion > map - 物件地図
+-------------------------------------------- */
+.mansion .map .map-pict-wrap {}
+
+.mansion .map .map-area {
+	float: left;
+	width: 50%;
+}
+
+.mansion .map .map-area #map-container {
+	position: relative;
+}
+
+.mansion .map .map-area #map-canvas {
+	height: 500px;
+	width: 600px;
+	/* 2017-12-26: コメントアウトを解除。 */
+}
+
+/* マップ内の吹き出し設定 */
+.infowindow {
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.infowindow .title {
+	float: left;
+	line-height: 1.3em;
+	padding: 8px 3px 6px;
+	text-align: center;
+	width: 90%
+}
+
+.infowindow .title a {
+	color: #061429;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.infowindow .address {
+	font-size: 13px;
+	padding: 8px 0 6px;
+	text-align: center;
+	width: 100%;
+}
+
+.infowindow th {
+	color: #061429;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 6px 3px 3px;
+	text-align: center;
+}
+
+.infowindow td {
+	font-size: 11px;
+	line-height: 1.4em;
+	text-align: left;
+}
+
+.infowindow td.img {
+	padding: 2px;
+	text-align: center;
+	width: 100px;
+}
+
+.infowindow td img {
+	width: 100px;
+}
+
+.infowindow .link {
+	margin: 1em 0 0;
+	text-align: center;
+}
+
+.infowindow .link .button {
+	font-size: 13px;
+	padding: 10px 18px 10px 25px;
+}
+
+.infowindow .link .button:hover {
+	background: #a2b3cc;
+}
+
+/* マップ内の吹き出し設定 ---------- ここまで */
+
+.mansion .map .map-info {
+	text-align: left;
+}
+
+.mansion .map .map-area .map-info {
+	margin-top: 18px;
+}
+
+.mansion .map .pict-area {
+	float: right;
+	width: 50%;
+}
+
+.mansion .map .pict-area .map-info {
+	margin: 6px 0 0 240px;
+}
+
+.mansion .map .map-area .map-info .kotsu {
+	/* 交通の部分のみちょっと荒手な改造 */
+	display: table;
+	margin-top: 6px;
+	width: 100%;
+}
+
+.mansion .map .map-area .map-info .kotsu>span:not(.kotsu_text_row) {
+	display: table-cell;
+	vertical-align: top;
+	width: 51px;
+}
+
+.mansion .map .map-area .map-info .kotsu .kotsu_text_row {
+	display: block;
+}
+
+
+/*----------------------------------------------------
+	.premium - プレミアムサイト
+----------------------------------------------------*/
+
+.premium .txt {
+	margin-top: 40px;
+	text-align: left;
+}
+
+.premium .cap-image-wrap {
+	box-sizing: border-box;
+	margin: 0 auto 60px;
+	text-align: center;
+}
+
+.premium .cap-image-wrap .smpl-box {
+	margin: 2.5em 0 0;
+	vertical-align: top;
+	width: 48%;
+}
+
+.premium .cap-image-wrap .smpl-box.left-side {
+	float: left;
+}
+
+.premium .cap-image-wrap .smpl-box.right-side {
+	float: right;
+}
+
+.premium .cap-image-wrap .cap-img {
+	background: #f6f6f6;
+	display: block;
+	max-height: 500px;
+	width: auto;
+}
+
+.premium .cap-image-wrap .txt {
+	border-bottom: 2px dotted #c9cfd8;
+	color: #666;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1;
+	margin: 15px 0 0;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.premium .premium-site-wrap {
+	padding-bottom: 60px;
+}
+
+.premium .premium-site-wrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.premium .premium-site-wrap li.mansion-one-wrap {
+	background: url(../img/top/_/bg_box.png) repeat;
+	border: 1px solid #dbdbdb;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 2.5em 10px;
+	padding: 1em 2em;
+	position: relative;
+	vertical-align: top;
+	width: 26.5%;
+}
+
+.premium .premium-site-wrap li.mansion-one-wrap:hover {
+	background: #f5f8fb;
+	border-color: #c9cfd8;
+}
+
+.premium .premium-site-wrap li .bg-photo-area {
+	display: block;
+	min-height: 200px;
+}
+
+.premium .premium-site-wrap li .img-photo {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 318px;
+}
+
+.premium .premium-site-wrap li .img-txt {
+	display: block;
+	height: 100px;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.premium .premium-site-wrap .mansion-one-wrap .button {
+	display: block;
+}
+
+.premium .premium-site-wrap .mansion-one-wrap:hover .button {
+	background-color: #90aac1;
+}
+
+
+
+/*----------------------------------------------------
+	.policy プライバシーポリシー
+----------------------------------------------------*/
+/*
+.policy .content_title{
+  margin:1em 0;
+}
+.policy .content_sub_title{
+  margin:2em 0 1em;
+}
+.policy ol {margin-top:1em;}
+.policy ol li {
+	margin:0 0 8px 3em; /* Give each list item a left margin to make room for the numbers
+	padding:4px 8px;
+	font-weight:normal;
+	font-size:14px;
+}
+.policy ol li:before {
+	padding:3px 0;
+	background:#dddabe;
+}
+*/
+
+.pdf-link {
+	margin: 10px auto 10px;
+}
+
+.pdf-link:before {
+	color: #eb7c81;
+	content: "\f1c1";
+	font-weight: bold;
+	font-family: FontAwesome;
+	margin-right: 10px;
+}
+
+
+/* info-update - 売出中物件の更新日テキスト
+--------------------------------------*/
+
+.info-update {
+	clear: both;
+	color: #666;
+	font-size: 13px;
+	line-height: 1.8;
+	letter-spacing: 1px;
+	margin: -15px auto 2em;
+	text-align: right;
+	width: 99%;
+}

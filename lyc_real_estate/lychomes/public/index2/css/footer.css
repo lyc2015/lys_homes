@@ -1,0 +1,522 @@
+@charset "utf-8";
+/* footer
+============================================================ */
+
+/*
+フッター
+---------------------------------------*/
+
+.footer {
+	background: #f0f0f0;
+	/* border-top: 1px solid #0D1B37; */
+	-webkit-box-shadow: 0 20px 20px -20px rgba(4, 0, 0, 0.1) inset;
+	box-shadow: 0 20px 20px -20px rgba(4, 0, 0, 0.1) inset;
+	display: block;
+	font-size: 11px;
+	line-height: 1.9;
+	margin: 0;
+	min-width: 1200px;
+	padding: 3em 0 1em;
+	width: 100%;
+}
+
+/* .link
+----------------------------------------*/
+
+.footer a:link {
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+	transition: 0.2s color ease;
+	margin: 0 0 7px;
+	letter-spacing: normal;
+}
+
+.footer a:visited {
+	color: #666;
+}
+
+.footer a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+.footer a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+/*
+----------------------------------------*/
+.footer-block {
+	margin: 0 auto;
+	position: relative;
+	width: 1200px;
+}
+
+.footer-nav {
+	display: table;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-nav .ft-col-wrap {
+	display: table-cell;
+	/* border:1px solid #ddd; */
+	list-style: none;
+	padding: inherit;
+	padding: 0 1% 0 0;
+}
+
+.footer-nav .ft-col-wrap dl.ft-dl-sp{
+	margin-top: 20px;
+}
+
+
+.footer-nav .ft-home {
+	width: 14.5%;
+}
+
+.footer-nav .ft-company {
+	width: 12.5%;
+}
+
+.footer-nav .ft-enterprise {
+	width: 19%;
+}
+
+.footer-nav .ft-external_link {
+	width: 15%;
+}
+
+.footer-nav .ft-premium_link {
+	width: 100%;
+	/* display: block; */
+	padding: 0;
+}
+
+.footer-nav .ft-col-wrap a.ft-link_list_title,
+.footer-nav .ft-col-wrap span.ft-link_list_title,
+.footer-nav .ft-col-wrap .head-txt {
+	font-weight: bold !important;
+	font-size: 11px !important;
+	margin-bottom: 11px;
+	color: #333;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #eee;
+	display: block;
+}
+
+.footer-nav a:hover {
+	text-decoration: underline;
+}
+
+.footer-nav .ft-col-wrap .inr-list {
+	/* margin: 0 0 15px 20px; */
+}
+
+.footer-nav .ft-col-wrap .inr-list .b-link {
+	display: inline-block;
+	font-size: 12px;
+	width: 49%;
+}
+
+.footer-nav .ft-col1 .inr-list li span {
+	float: none;
+	line-height: 220%;
+}
+
+.footer-nav .inr-list li a.js_to_sgn span {
+	letter-spacing: 0;
+}
+
+.footer-nav .inr-list li a.js_to_brilliaclub span {
+	letter-spacing: 0;
+}
+
+.footer-nav .ft-col4 .inr-list li span,
+.footer-nav .ft-col5 .inr-list li span {
+	letter-spacing: 0;
+}
+
+.footer-nav .inr-list li span {
+	/* font-size: 12px; */
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: normal;
+}
+
+.footer-nav .inr-list.inr-link-txt a {
+	/* color: #999; */
+	margin: 0 0 7px;
+}
+
+
+.footer-nav .icon-window {
+	height: 10px;
+	margin-left: 3px;
+	vertical-align: middle;
+	width: 12px;
+}
+
+
+
+/* .footer_copy
+----------------------------------------*/
+
+.footer-copy-wrap {
+	height: 30px;
+	margin-top: 6px;
+	width: 100%;
+}
+
+.footer-copy-wrap .copyright {
+	color: #808b94;
+	font-size: 11px;
+	margin: 3em auto 0;
+	text-align: center;
+	/* width: 1180px; */
+}
+
+
+/*page top
+----------------------------------------*/
+
+.pagetop {
+	background: #00234b;
+	border-radius: 2px;
+	bottom: -35px;
+	display: block;
+	height: 40px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 49px;
+}
+
+.pagetop .icon-pagetop {
+	display: inline-block;
+	margin: -5px 0 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.pagetop:hover {
+	background: #204462 url(../img/common/btn_pagetop_on.png) center no-repeat;
+}
+
+.pagetop:hover .icon-pagetop {
+	display: none;
+}
+
+
+/* .page_underlayer_nav
+============================================================ */
+.page_underlayer_nav_wrap{
+	text-align: center;
+	margin: 0 0 3em;
+}
+
+.page_underlayer_nav_wrap .block_title{
+	margin-top:0;
+}
+.page_underlayer_nav_wrap .block_title span{
+	font-weight: bold;
+	color: #262626;
+}
+
+
+.page_underlayer_nav{
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.page_underlayer_nav li{
+	display: inline-block;
+	margin-left: 22px;
+	width: 270px;
+	vertical-align: top;
+}
+
+
+
+
+
+/* sub_footer
+============================================================ */
+
+.sub_ft_nav-title {
+	text-align: center;
+}
+
+.sub_ft_nav_wrap {
+	margin-bottom: 3em;
+}
+
+.sub_footer ul.sub_ft_nav {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.sub_footer ul.sub_ft_nav li {
+	text-align: center;
+	 /* IE8から使用可能 */
+}
+.sub_footer ul.sub_ft_nav li .button_label {
+	font-size: 95%;
+}
+.sub_footer ul.sub_ft_nav li a {
+	position: relative;
+	padding: 0 1em;
+	text-decoration: none;
+	font-size: 13px;
+	color: #fff;
+	z-index: 1;
+	min-width: 55px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sub_footer ul.sub_ft_nav li a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0px;
+	right: 0;
+	z-index: -1;
+	/*background-color: rgb(0, 0, 0, .8);*/
+	background-color:#333;
+	transform: skewX(-22deg);
+}
+
+.sub_footer ul.sub_ft_nav li:nth-child(odd) a::before {
+	/*background-color: rgb(0, 0, 0, .8);*/
+	background-color:#333;
+}
+
+.sub_footer ul.sub_ft_nav li a:hover::before {
+	background-color: #f0f0f0;
+}
+
+.sub_footer ul.sub_ft_nav li a:hover {
+	color: #262626;
+}
+
+.sub_footer ul.sub_ft_nav li.nav_active a:before {
+	background-color: #666;
+}
+
+.sub_footer ul.sub_ft_nav li.nav_active a:hover {
+	color: #fff;
+}
+
+/* other_languages_page
+============================================================ */
+.other_languages_page .footer-copy-wrap .copyright{
+	margin-top: 0;
+}
+
+.other_languages_page .ft_iso{}
+
+.other_languages_page .ft_iso .img{
+	width: 336px;
+}
+
+
+/* 【共通】footBlockContactWrap
+****オーバーレイ
+============================================================ */
+
+.footBlockContactWrap_bg {
+	height: 60px;
+}
+
+.footBlockContactWrap {
+	background: rgba(39,39,39,.35);
+	/*background:#0D1B37;*/
+	-ms-filter: "alpha(opacity=$number*0)";
+	filter: alpha(opacity=0);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	padding: 10px 0;
+	/*	position: relative;*/
+	width: 100%;
+}
+
+.footBlockContactWrap.js-isActive {
+	-ms-filter: "alpha(opacity=$number*100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	position: fixed;
+	z-index: 100;
+}
+
+.footBlockContactWrap.js-isOver {
+	-ms-filter: "alpha(opacity=$number*100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.footBlockContactWrap .ft-contact-inner {
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 1200px;
+}
+
+.footBlockContactWrap .ft-contact-inner span {
+	color: #fff;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 500;
+	margin: 0 6px;
+	letter-spacing: 1px;
+}
+
+.footBlockContactWrap .ft-contact-inner span.overlay_ft_txt {
+	margin: 0 20px 0 6px;
+}
+
+.footBlockContactWrap .ft-contact-inner .sale-count {
+	background: #f6f6f6;
+	border-radius: 2px;
+}
+
+.footBlockContactWrap .ft-contact-inner .sale-count:hover {
+	background: #b8c7dc;
+}
+
+.footBlockContactWrap .ft-contact-inner .sale-count a {
+	color: #003e72;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 10px 15px 10px 25px;
+}
+
+.footBlockContactWrap .ft-contact-inner .count {
+	color: #c00004;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+
+.footBlockContactWrap .ft-contact-inner .button {
+	color: #262626!important;
+	background: #fff;
+	font-weight: 600;
+	position:relative;
+}
+
+.footBlockContactWrap .ft-contact-inner .button:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 7px 7px;
+	border-color: transparent transparent #262626 transparent;
+	z-index: 999;
+}
+
+/* 黒ボタン */
+.footBlockContactWrap .ft-contact-inner .button.black {
+	color: #fff!important;
+	background: #262626;
+	font-weight: 500;
+	position:relative;
+	border-color: transparent;
+}
+
+.footBlockContactWrap .ft-contact-inner .button.black:after {
+	content: '';
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 7px 7px;
+	border-color: transparent transparent #fff transparent;
+	z-index: 999;
+}
+
+.footBlockContactWrap .ft-contact-inner .black.anime::before {
+	background: rgba(255, 255, 255, .03);
+}
+
+/*
+.footBlockContactWrap .ft-contact-inner .button:hover {
+	background: #a2b3cc;
+}
+*/
+.footBlockContactWrap .ft-contact-inner .button i{
+    margin-right:5px
+}
+
+
+.footBlockContactWrap .ft-contact-inner .close {
+	background: #a9b4c5;
+	border: 1px solid #a2b3cc;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 21px;
+	line-height: 1;
+	margin: 0;
+	padding: 0 5px;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+
+/* もっと見るボタン関連
+============================================================ */
+.footer-nav .ft-col-wrap .inr-list .b-link.js_ft_premium_link_hidden {
+	display:none;
+	height: 0;
+	margin: 0;
+}
+
+.ft-premium_link .more_button_wrap {
+	text-align: right;
+}
+
+.ft-premium_link .ft_premium_link_more_button {
+	cursor: pointer;
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+	transition: 0.2s color ease;
+	margin: 0 0 7px;
+	padding-left: 15px;
+	letter-spacing: normal;
+	position: relative;
+}
+
+.ft-premium_link .ft_premium_link_more_button:before {
+	content: "＞";
+	font-size: 10px;
+	position: absolute;
+	left: 0;
+	top: 1px;
+	color: #ccc;
+}
+
+.ft-premium_link .ft_premium_link_more_button:hover{
+	text-decoration: underline;
+}
+

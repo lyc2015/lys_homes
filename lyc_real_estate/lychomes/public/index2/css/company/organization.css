@@ -1,0 +1,50 @@
+/*organization*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-m.png);
+}
+
+/* content1
+---------------------------------------------------*/
+.enclose {
+	width: 916px;
+	margin: 4em auto 0;
+}
+
+.enclose .img {
+}
+
+.enclose ul.items {
+	text-align: right;
+}
+
+.enclose .items li {
+	display: inline-block;
+	position: relative;
+}
+
+.enclose .items li .pdf::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f1c1";
+	font-weight: normal;
+	padding-right: .5em;
+}
+
+.enclose .items li a {
+	border-bottom: 1px solid;
+}
+
+.enclose .items li a span {
+	font-size: 90%;
+	margin-left: .5em;
+}

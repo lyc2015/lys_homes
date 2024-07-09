@@ -1,0 +1,22 @@
+/*history*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-s.png);
+}
+
+/* common
+---------------------------------------------------*/
+
+
+/* content1
+---------------------------------------------------*/

@@ -1,0 +1,57 @@
+/*philosophy*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-l.png);
+}
+
+/* common
+---------------------------------------------------*/
+.philosophy .introduction_statement {
+	margin-bottom: 5em;
+}
+
+.philosophy .introduction_statement p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 2.2em;
+}
+
+/* content1
+---------------------------------------------------*/
+.content1.block_inner{
+	width: 100%;
+}
+
+.content1 .introduction_statement{
+	background-image: url(../../img/common/stripe.svg);
+	padding: 3em 0 4em;
+	margin-bottom: 0;
+}
+
+.content1 .introduction_statement p{
+	font-size: 20px;
+}
+
+.content1 .introduction_statement .em{
+	font-size: 41px;
+}
+
+/* content2
+---------------------------------------------------*/
+
+.content2 .greeting{
+	margin-top: 6em;
+}
+
+.content2 .greeting{
+	margin-top: 6em;
+}

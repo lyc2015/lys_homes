@@ -1,0 +1,33 @@
+/*english*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-m.png);
+}
+
+
+/* content1
+---------------------------------------------------*/
+
+.content1 .president{
+	margin-top: 1em;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #262626;
+}
+
+.content1 .president_name{
+	font-size: 32px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	line-height: 1;
+	margin-top: 10px;
+	text-align: right;
+}

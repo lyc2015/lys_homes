@@ -1,0 +1,229 @@
+/*chintai*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	background: url(../../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../../img/common/page_header_catch-s.png);
+}
+
+/* common
+---------------------------------------------------*/
+.chintai .introduction_statement {
+	margin-bottom: 5em;
+}
+
+.chintai .introduction_statement p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 2.2em;
+}
+
+/* content1
+---------------------------------------------------*/
+
+.content1 .introduction_statement {
+	margin-bottom: 2em;
+}
+
+.jigyo {
+	margin-top: 5em;
+}
+
+.jigyo .img-area {
+	width: 570px;
+}
+
+.jigyo .jigyo-title {
+	margin-bottom: 1em;
+}
+
+.jigyo .jigyo-title .title {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.8;
+	letter-spacing: .15em;
+}
+
+.jigyo .jigyo-title .komejiru {
+	color: #7a7a7a;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 1px;
+	margin-left: 1em;
+}
+
+.jigyo .txts {
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #999;
+	padding: 1.8em 0;
+}
+
+.jigyo .txts p {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.jigyo .link_button {
+	margin: 2em 10px 1em;
+}
+
+
+.list_wrap {
+	background-image: url(../../../img/common/stripe.svg);
+	position: relative;
+	margin: 4em 30px 7em;
+	padding: 5em 50px 3em;
+}
+
+.list_wrap.list-right {
+}
+
+.list_wrap_title {
+	position: absolute;
+	top: 0;
+	left: 129px;
+	font-size: 1em;
+	padding: 12px 0;
+	margin: 0;
+	transform: translateY(-50%);
+	background: #262626;
+	color: #fff;
+	width: 882px;
+	text-align: center;
+}
+
+.list-right .list_wrap_title {
+	/* left: 630px; */
+}
+
+.list_wrap_title span {
+	font-size: 18px;
+}
+
+.list-normal_card {
+	text-align: center;
+}
+
+.list-normal_card li.item-normal_card {
+	display: inline-block;
+	margin: 0px 38px;
+	vertical-align: top;
+	width: 400px;
+	/* background: #fff; */
+}
+
+.list-normal_card .normal_card-title {
+	padding: 10px 10px 0;
+	background: #fff;
+}
+
+
+.list-normal_card .normal_card-title span {
+	font-size: 16px;
+	font-weight: 600;
+	background: #fff;
+	padding: 10px 0 10px 20px;
+	letter-spacing: 3px;
+	position: relative;
+	top: -24px;
+}
+
+.list-normal_card .normal_card-title span:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f2d2";
+	font-weight: normal;
+	padding-left: .5em;
+	padding-right: .8em;
+}
+
+.list-normal_card .normal_card-title span:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -10px;
+	display: inline-block;
+	width: 20px;
+	height: 1px;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translate(-50%);
+	background-color: #ccc;
+}
+
+.list-normal_card li.item-normal_card .img_wrap {
+	background: #262626;
+	position: relative;
+}
+
+.list-normal_card li.item-normal_card:hover .img_wrap {
+	color: #fff;
+}
+
+
+.list-normal_card li.item-normal_card:hover .img_wrap:after {
+	color: #fff;
+	content: "VIEW MORE";
+	font-size: 20px;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	height: 200px;
+	left: 0;
+	letter-spacing: 2px;
+	line-height: 200px;
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+	top: 0;
+	vertical-align: middle;
+	width: 100%;
+	z-index: 2;
+}
+
+.list-normal_card li.item-normal_card img {
+	/* opacity: 0.9; */
+}
+
+.list-normal_card li.item-normal_card:hover img {
+	opacity: 0.5;
+	transition: all .5s;
+}
+
+
+.list-normal_card li.item-normal_card .info_txt {
+	display: block;
+	background: #fff;
+	color: #333;
+	padding: 13px 20px 26px;
+	font-size: 13px;
+	margin-bottom: 1px;
+	text-align: left;
+	min-height: 110px;
+	position: relative;
+}
+
+
+.list-normal_card li.item-normal_card .info_txt:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 10px 11px;
+	border-color: transparent transparent #0D1B37 transparent;
+}
+
+.list-normal_card li.item-normal_card .info_txt .txtlink {
+	display: inline-block;
+	text-decoration: underline;
+}

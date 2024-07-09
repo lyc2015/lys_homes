@@ -1,0 +1,125 @@
+/*corporate*/
+@charset "utf-8";
+
+/* header
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-m.png);
+}
+
+
+
+.table-outline {
+	text-align: left;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.table-outline th {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	font-weight: bold;
+	line-height: 1.8;
+	padding: 10px;
+	text-align: center;
+	width: 250px;
+	vertical-align: middle;
+}
+
+.table-outline td {
+	border: 0;
+	border-bottom: 1px solid #eee;
+	letter-spacing: 2px;
+	line-height: 1.9;
+	padding: 1em;
+	vertical-align: middle;
+}
+
+.officer {
+	margin-bottom: 1em;
+}
+
+.officer dt {
+	clear: both;
+	float: left;
+	width: 15em;
+}
+
+.officer dd {
+	width: 8em;
+	margin-left: 18em;
+}
+
+.officer .forSp {
+	display: none;
+}
+
+.table-outline a.target_map {
+	font-weight: bold;
+	font-size: 90%;
+	display: inline-block;
+	margin: .5em 0 1em;
+}
+
+.table-outline .target_map:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f276";
+	font-weight: bold;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.table-outline a.target_blank {
+	/* border-bottom: 1px solid; */
+	display: inline-block;
+}
+
+.table-outline .target_blank:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f2d2";
+	font-weight: normal;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+
+
+.table-history {
+	text-align: left;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.table-history th {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 1.8;
+	padding: 10px;
+	text-align: center;
+	width: 250px;
+	vertical-align: middle;
+}
+
+.table-history td {
+	border: 0;
+	border-bottom: 1px solid #eee;
+	letter-spacing: 2px;
+	line-height: 1.9;
+	padding: 1em;
+	vertical-align: middle;
+}
+
+.notes-table_history {
+	width: 91%;
+	margin: 2em auto 0;
+}

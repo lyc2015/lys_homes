@@ -1,0 +1,125 @@
+/*profile*/
+@charset "utf-8";
+
+/* profile
+---------------------------------------------------*/
+.page_header_bg_img {
+	z-index: 1;
+	background: url(../../img/common/page_header-def.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.page_header_catch {
+	z-index: 2;
+	background-image: url(../../img/common/page_header_catch-s.png);
+}
+
+/* content1
+---------------------------------------------------*/
+.content1 ul.list-mini_content_link {
+}
+
+.content1 ul.list-mini_content_link li {
+	margin-left: 36px;
+	border-left: 1px solid #262626;
+	background-image: url(../../img/common/stripe.svg);
+}
+
+.content1 ul.list-mini_content_link h4.title {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+
+.content1 ul.list-mini_content_link .txt-wrap {
+	padding: 1em;
+	margin: 0;
+	background: #262626;
+	z-index: 2;
+	position: relative;
+}
+
+ul.list-mini_content_link .txt-wrap:after {
+	border-color: transparent transparent #fff transparent;
+}
+
+.kazari-wrap {
+	text-align: left;
+	padding: 1em;
+}
+.kazari-wrap:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f13a";
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -10px;
+    line-height: 1;
+}
+.kazari-wrap .txt1 {
+	color: #262626;
+	font-size: 13px;
+}
+
+.kazari-wrap .txt2 {
+	font-size: 24px;
+}
+
+
+/*  .segment
+=========================================*/
+.segment{
+	margin-top: 5em;
+}
+
+.segment .img-area{text-align: center;}
+
+.segment .segment-title {
+	margin-bottom: 15px;
+	/* padding-bottom: 1.8em; */
+	text-align: center;
+	/* border-bottom: 1px solid #999; */
+	letter-spacing: .1em;
+}
+
+.segment .segment-title .title {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: .1em;
+}
+
+.segment .segment-title .komejiru {
+	color: #7a7a7a;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 1px;
+	margin-left: 1em;
+}
+
+.segment .txts {
+	padding: 1.8em 0;
+}
+
+.original-chinese_page .segment .txts{
+	text-align: center;
+}
+.simplified-chinese_page .segment .txts{
+	text-align: center;
+}
+
+
+.segment .txts  p {
+	font-size: 14px;
+}
+
+.segment .link_button{
+	margin:2em 10px 1em;
+}

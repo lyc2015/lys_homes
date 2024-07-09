@@ -1,0 +1,155 @@
+@charset "utf-8";
+/*----------------------------------------------------
+  ヘッダー
+----------------------------------------------------*/
+/* header.cssに丸ごと記述 */
+
+/*----------------------------------------------------
+  ぱんくず
+----------------------------------------------------*/
+#pankuzu {
+	padding: 0 0 10px;
+	width: 100%;
+}
+
+#pankuzu .body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 12px;
+}
+
+#pankuzu .body .partition {
+	margin: 0 10px;
+}
+
+/*----------------------------------------------------
+  #wrapper - ヘッダーフッターを除くページ全体のラップ
+----------------------------------------------------*/
+#wrapper {
+	width: 100%;
+	min-width: 1200px;
+	_display: inline;
+	_zoom: 1;
+}
+
+/*----------------------------------------------------
+  #page-contents ページコンテンツ全体
+----------------------------------------------------*/
+#page_contents {
+	text-align: left;
+	width: 100%;
+	min-width: 1200px;
+}
+
+/*----------------------------------------------------
+  .#contents - コンテンツ部分
+----------------------------------------------------*/
+#contents {
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+}
+
+.main {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+.コンテンツブロックをラップ .content_block
+*/
+.content_block {
+	min-width: 1200px;
+	width: 1200px;
+	/* margin: 0 auto; */
+	padding: 0;
+	background-color: transparent;
+}
+
+/*
+.背景を横幅いっぱいにしたいとき
+*/
+.content_block.width_full {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.content_block .block_inner {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: transparent;
+}
+
+/*
+mainの場合、blockの下にマージン
+*/
+.main .content_block > .block_inner {
+	padding-top: 70px;
+	margin-bottom: 70px;
+}
+
+/*----------------------------------------------------
+  フッター
+----------------------------------------------------*/
+/* footer.cssに丸ごと記述 */
+
+
+
+/* レイアウト装飾
+***********************************************************************/
+/*
+.背景色
+*/
+
+.width_full.bg--gray {
+	background: #f0f0f0;
+}
+
+.width_full.bg--lightgray {
+	/* background: rgba(0,0,0,.02); */
+}
+
+.bg_pattern{
+	background: #fff;
+}
+
+
+
+
+/*
+.背景ありななめ区切り装飾（灰色）
+*/
+.width_full.bg--oblique {
+	position: relative;
+	padding: 0 0 100px;
+}
+
+.width_full.bg--oblique:before{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height:100px;
+}
+
+.width_full.bg--oblique:before {
+	background: linear-gradient(to bottom left, #fff, #fff 50%, #f8f8f8 50%, #f8f8f8);
+}
+
+
+/* 背景にパターン(決定) */
+.width_full.bg--pattern19 {
+	background: url(../img/common/bg_pattern-19.png) ;
+}
+
+
+/* 背景色変更に伴うボタンホバー設定 */
+.width_full.bg--gray .link_button::before,
+.width_full.bg--lightgreen .link_button::before {
+	background: #fff;
+}
+
